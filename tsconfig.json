@@ -1,0 +1,21 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.web.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@main/*": ["src/main/*"],
+      "@renderer/*": ["src/renderer/src/*"],
+      "@components/*": ["src/renderer/src/components/*"],
+      "@pages/*": ["src/renderer/src/pages/*"],
+      "@store/*": ["src/renderer/src/store/*"],
+      "@hooks/*": ["src/renderer/src/hooks/*"],
+      "@lib/*": ["src/renderer/src/lib/*"],
+      "@types/*": ["src/renderer/src/types/*"]
+    }
+  }
+}
