@@ -1,6 +1,6 @@
 # Constitución legal del negocio
 
-Estado: 🟡 pendiente de decisión — falta elegir tipo societario y confirmar dirección/actividad exacta.
+Estado: 🟢 tipo societario decidido (**persona natural**) — falta confirmar dirección/actividad exacta y el nombre definitivo.
 
 > Todo lo de abajo es DATO VERIFICADO por investigación web (fuentes al final de cada bloque) salvo donde se marca explícitamente como HIPÓTESIS. Nada aquí reemplaza una consulta con un contador/abogado antes de firmar algo — esto es la hoja de ruta, no el trámite mismo.
 
@@ -18,20 +18,19 @@ Es la decisión que condiciona todo lo demás (nombre en Cámara de Comercio, c�
 | **Obligaciones recurrentes** | Renovar matrícula mercantil cada año | Renovar matrícula + más exposición a control societario si crece (Supersociedades) |
 | **Cuándo conviene** | Negocio de un solo dueño, arranque simple, bajo riesgo de deudas grandes con proveedores | Si habrá más de un socio, o si se planea pedir crédito/proveedores con cupos grandes, o si se quiere separar el patrimonio personal del riesgo del taller |
 
-**Recomendación de partida** (a confirmar con ustedes): si el negocio sigue siendo de una sola persona dueña y el riesgo de deudas grandes con proveedores es bajo al inicio, persona natural es más rápido y barato para arrancar mañana mismo; si ya se sabe que habrá inversión externa, un socio, o compras a crédito importantes con proveedores de repuestos, SAS protege mejor el patrimonio personal desde el día 1.
+**✅ Decisión tomada: Persona natural.** Arranque más rápido y barato. Implicación a tener presente: como persona natural comerciante, respondes con tu patrimonio personal por las deudas del negocio (no solo con lo invertido en él) — por eso conviene ser disciplinado con la cartera/crédito a proveedores (sección de Estrategia financiera del informe día 1) y no crecer la exposición a deuda más rápido de lo que el negocio genera en caja. Si más adelante entra un socio o se pide un cupo de crédito grande con un proveedor, ese es el momento de reevaluar convertir a SAS — no antes.
 
 *Fuentes: Buk, Gestión Legal Colombia, Rio Consultores, Asistentes Colombia, Cuadro Legal (búsquedas de 2026).*
 
-## 2. Pasos para constituir (si se elige SAS)
+## 2. Pasos para constituir como persona natural (ruta elegida)
 
-1. **Verificar el nombre en RUES** (Registro Único Empresarial y Social) antes de redactar nada — ver `01-naming.md`, ya adelantamos esta verificación para 3 candidatos.
-2. **Redactar el documento privado de constitución** con: nombre + documento de identidad de los accionistas, razón social + "SAS", domicilio principal (dirección del taller en Cali), término de duración, objeto social, capital autorizado/suscrito/pagado, forma de administración, nombre del representante legal.
-3. **Firmar** el documento (reconocimiento de firma ante notario; escritura pública solo si se aportan inmuebles).
-4. **Presentar en la Cámara de Comercio de Cali**: formulario RUES, formulario RUT y carátula única empresarial.
-5. **Obtener NIT y RUT definitivo en la DIAN** una vez matriculada la sociedad.
-6. **Plazo legal**: máximo 5 días hábiles desde que se radican los documentos completos (Ley 2069); en la práctica puede tomar 10-15 días si hay observaciones.
+1. **Verificar el nombre en RUES** (Registro Único Empresarial y Social) antes de radicar nada — ver `01-naming.md`.
+2. **Tramitar el RUT en la DIAN** como persona natural con actividad comercial (si ya se tiene cédula, es el mismo trámite de inscripción/actualización de RUT).
+3. **Matricularse como comerciante persona natural** directamente en la Cámara de Comercio de Cali, indicando el nombre comercial del establecimiento (no razón social — como persona natural no hace falta "SAS" ni documento de constitución), la dirección exacta y la(s) actividad(es) económica(s) (código CIIU, ver checklist).
+4. **Registrar el establecimiento de comercio** (el local físico del taller) como matrícula adicional vinculada a la persona natural — es donde se declaran los activos del negocio para calcular la tarifa de renovación anual.
+5. **Plazo legal**: máximo 5 días hábiles desde que se radican los documentos completos (Ley 2069); en la práctica puede tomar 10-15 días si hay observaciones.
 
-Si se elige **persona natural**, los pasos 2-3 no aplican — se hace directamente la matrícula mercantil como persona natural comerciante en la Cámara de Comercio de Cali con el RUT ya tramitado en la DIAN.
+*(La ruta SAS —documento privado de constitución, reconocimiento de firma ante notario, NIT propio de la sociedad— queda documentada arriba por si el negocio la necesita más adelante al sumar un socio o pedir cupo de crédito grande.)*
 
 *Fuentes: Buk, Gestión Legal Colombia, Dian.com.co, Consejurídico (búsquedas de 2026).*
 
@@ -56,11 +55,7 @@ Una vez matriculados, el establecimiento físico (el taller) necesita además, s
 
 ## 5. Datos de inicio que faltan para avanzar (checklist)
 
-Para completar este documento y poder radicar cualquier trámite, se necesita definir:
-
-- [ ] Nombre definitivo (ver `01-naming.md`)
-- [ ] Tipo societario: persona natural o SAS
+- [x] Tipo societario: **persona natural**
+- [ ] Nombre definitivo (ver `01-naming.md` — segunda ronda de candidatos en curso)
 - [ ] Dirección exacta del taller en Cali (para el concepto de uso de suelo)
-- [ ] ¿Habrá más de un socio? ¿Quién sería el representante legal?
 - [ ] Actividad económica (código CIIU) a declarar — candidatos ya identificados en RUES para negocios similares: **4542** (mantenimiento y reparación de motocicletas) y **4541** (comercio de motocicletas y sus partes/piezas/accesorios); probablemente se necesiten ambos si se va a reparar y vender repuestos.
-- [ ] Capital social a declarar (solo si se elige SAS)

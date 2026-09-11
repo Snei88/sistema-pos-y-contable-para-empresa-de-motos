@@ -1,8 +1,22 @@
 # Naming y marca
 
-Estado: 🟡 pendiente de decisión final.
+Estado: 🟡 pendiente de decisión final — ronda 1 (Bujía/Piñón/Motiva) descartada por el dueño, en ronda 2.
 
-## Por qué se descartaron las opciones "obvias"
+## Ronda 2 — nuevos candidatos verificados (RUES)
+
+| Nombre | Por qué funciona | RUES | Estado |
+|---|---|---|---|
+| **Chispa** | Palabra corta y universal de "energía/ingenio"; narrativa fuerte de negocio que empieza ("con chispa"); fácil de decir, buen handle, funciona como verbo ("dale chispa a tu moto"). | 0 coincidencias | Disponible |
+| **Palanca** | Doble sentido real: pieza mecánica (palanca de cambios) + expresión colombiana de "ayuda/impulso para lograr algo" ("tener palanca"). Distintivo, ningún competidor lo usa. | 0 coincidencias | Disponible |
+| **Faros** | Evoca "guiar/iluminar el camino"; pieza visible y reconocible de la moto; corto, cálido, buena identidad visual (un faro como ícono de marca). | 0 coincidencias | Disponible |
+
+Se evaluó y descartó **"Rines"** en esta ronda: 21 coincidencias en RUES, con negocios activos en Bogotá, Manizales y Soacha usando el patrón "Motos y Rines" — más saturado que los tres de arriba, aunque sin choque directo detectado en Cali/Valle.
+
+## Ronda 1 (descartada por decisión del dueño)
+
+Se había propuesto Bujía / Piñón / Motiva (los tres con 0-4 coincidencias en RUES, ver historial de commits de este archivo) — el dueño pidió otra ronda, quedan disponibles como respaldo si ninguno de la ronda 2 convence tampoco.
+
+## Por qué se descartaron las opciones "obvias" (ronda 1)
 
 Antes de proponer nombres se verificó cada candidato contra el **RUES** (Registro Único Empresarial y Social, registro mercantil nacional). La búsqueda es difusa (empareja por palabra suelta, no exacta), así que los resultados son *señal de saturación*, no un conteo perfecto — pero la señal fue clara y consistente:
 
@@ -14,7 +28,7 @@ Antes de proponer nombres se verificó cada candidato contra el **RUES** (Regist
 
 Conclusión: cualquier nombre tipo "Moto + adjetivo genérico" (Pro, Full, Rueda, Repuestos...) ya está tomado muchas veces en Colombia. Vale más invertir en un nombre distintivo que sea fácil de defender como marca.
 
-## Candidatos verificados (baja o nula coincidencia en RUES)
+### Detalle de los candidatos de ronda 1 (respaldo)
 
 | Nombre | Por qué funciona | RUES | Estado |
 |---|---|---|---|
@@ -33,4 +47,4 @@ Ninguno de los tres apareció como marca comercial establecida en una búsqueda 
 
 ## Decisión
 
-**Pendiente de confirmar con el dueño del negocio.** En cuanto se elija uno de los tres (o se pida una ronda adicional de candidatos), se actualiza este documento y se dispara el checklist de rebranding técnico documentado en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar).
+**Pendiente de confirmar con el dueño del negocio entre Chispa / Palanca / Faros** (o pedir ronda 3). En cuanto se elija uno, se actualiza este documento y se dispara el checklist de rebranding técnico documentado en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar) y el checklist de `00-constitucion-legal.md`.
