@@ -56,6 +56,6 @@ Una vez matriculados, el establecimiento físico (el taller) necesita además, s
 ## 5. Datos de inicio que faltan para avanzar (checklist)
 
 - [x] Tipo societario: **persona natural**
-- [x] Nombre definitivo: **Cadena** (forma recomendada "Cadena Motos" — ver `01-naming.md` para el detalle de verificación)
+- [ ] Nombre definitivo (ver `01-naming.md` — ronda 3 en curso, informada por investigación de marcas exitosas en otras ciudades/países)
 - [ ] Dirección exacta del taller en Cali (para el concepto de uso de suelo)
 - [ ] Actividad económica (código CIIU) a declarar — candidatos ya identificados en RUES para negocios similares: **4542** (mantenimiento y reparación de motocicletas) y **4541** (comercio de motocicletas y sus partes/piezas/accesorios); probablemente se necesiten ambos si se va a reparar y vender repuestos.
