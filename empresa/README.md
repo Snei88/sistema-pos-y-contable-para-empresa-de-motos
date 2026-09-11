@@ -8,9 +8,12 @@ No se construye todo de una vez — se avanza módulo por módulo, y cada docume
 
 | Documento | Estado | Qué contiene |
 |---|---|---|
-| [`00-constitucion-legal.md`](./00-constitucion-legal.md) | 🟡 en definición | Cómo formalizar el negocio en Colombia/Cali: persona natural vs. SAS, trámites, costos, permisos municipales/ambientales específicos de un taller. |
-| [`01-naming.md`](./01-naming.md) | 🟡 en definición | Candidatos de nombre evaluados y verificados contra el registro mercantil (RUES). |
+| [`00-constitucion-legal.md`](./00-constitucion-legal.md) | 🟢 tipo societario y nombre decididos | Persona natural, pasos de constitución, trámites municipales/ambientales de Cali, checklist de datos pendientes. |
+| [`01-naming.md`](./01-naming.md) | 🟢 nombre elegido: **Cadena Motos** | Historial completo de candidatos evaluados y verificados contra RUES (rondas 1 y 2) hasta la decisión final. |
+| [`02-estrategia-comercial-marketing.md`](./02-estrategia-comercial-marketing.md) | 🟢 en ejecución | Propuesta de valor, diferenciación, producto ancla, canales priorizados y plan de contenido de las primeras 4 semanas. |
 | [`informes/`](./informes/) | — | Informes fechados (auditorías, diagnósticos de negocio). El primero: día 1. |
+
+**Nombre del negocio: Cadena Motos.** Tipo societario: persona natural.
 
 ## Relación con el resto del repo
 

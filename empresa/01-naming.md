@@ -1,8 +1,20 @@
 # Naming y marca
 
-Estado: 🟡 pendiente de decisión final — ronda 1 (Bujía/Piñón/Motiva) descartada por el dueño, en ronda 2.
+Estado: 🟢 candidato elegido por el dueño: **Cadena** — pendiente de fijar la forma exacta (ver nota abajo) y de verificación final en Cámara de Comercio de Cali.
 
-## Ronda 2 — nuevos candidatos verificados (RUES)
+## Decisión del dueño: "Cadena"
+
+Verificado en RUES tras la elección:
+
+| Nombre | Hallazgo en RUES | Lectura |
+|---|---|---|
+| **Cadena Motos** | 8 coincidencias nacionales (todas variantes: "Cadena Motos" cancelada en Pasto, "Taller Motos Cadena" cancelada en Villavicencio, "Compraventa de Motos Cadena" activa en Putumayo). **Ninguna activa en Cali/Valle del Cauca.** | Saturación moderada — más que Chispa/Palanca/Faros (0 cada uno), mucho menor que MotoPro (37) o Full Moto. Ningún choque directo en la región donde va a operar el negocio. |
+
+**Por qué tiene sentido más allá de "sonar bien":** la cadena de transmisión (cadena/piñón/catalina) es uno de los repuestos de mayor rotación verificados en la sección de mercado del informe día 1 — el nombre no es solo una palabra bonita, describe literalmente el corazón del negocio (mantenimiento) y es fácil de asociar visualmente (un eslabón de cadena como ícono de marca).
+
+**Un solo pendiente antes de darlo por cerrado:** la forma exacta importa para la búsqueda real en Cámara de Comercio de Cali — no es lo mismo registrar "Cadena", "La Cadena" o "Cadena Motos". Recomiendo usar **"Cadena Motos"** (o el nombre + "Motos"/"Taller" como diferenciador) para que quede claro el giro del negocio y se distinga de las coincidencias históricas encontradas, ninguna de las cuales sigue activa hoy.
+
+## Ronda 2 (candidatos alternativos, quedan de respaldo)
 
 | Nombre | Por qué funciona | RUES | Estado |
 |---|---|---|---|
@@ -47,4 +59,7 @@ Ninguno de los tres apareció como marca comercial establecida en una búsqueda 
 
 ## Decisión
 
-**Pendiente de confirmar con el dueño del negocio entre Chispa / Palanca / Faros** (o pedir ronda 3). En cuanto se elija uno, se actualiza este documento y se dispara el checklist de rebranding técnico documentado en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar) y el checklist de `00-constitucion-legal.md`.
+**✅ Elegido: Cadena** (forma recomendada: "Cadena Motos"). Con esto ya se puede:
+1. Confirmar la forma exacta y marcar el checklist de `00-constitucion-legal.md`.
+2. Verificar handle de Instagram/TikTok y dominio disponibles con ese nombre exacto.
+3. Disparar el checklist de rebranding técnico documentado en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar) cuando el dueño lo pida.
