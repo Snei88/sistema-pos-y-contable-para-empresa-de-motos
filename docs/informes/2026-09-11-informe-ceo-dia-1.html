@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Informe CEO — Día 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F1F0E9; --surface:#FFFFFF; --surface-2:#E7E4D9; --surface-3:#DEDACB;
+    --ink:#1C1D17; --ink-soft:#585A4C; --ink-faint:#8A8C7A;
+    --border:#D7D3C2; --border-strong:#C2BDA6;
+    --accent:#1F5C6E; --accent-strong:#123B47; --accent-soft:#DCEAEC; --accent-ink:#0E323C;
+    --p0:#A9402C; --p0-soft:#F3E0DB; --p1:#B5721A; --p1-soft:#F2E4CB; --p2:#7C6E1F; --p2-soft:#EDE7C7; --p3:#4C6478; --p3-soft:#DEE6EB;
+    --ok:#3D7A4E; --ok-soft:#DCEBE0;
+    --shadow: 0 1px 2px rgba(20,20,10,.06), 0 8px 24px -12px rgba(20,20,10,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171A; --surface:#1B1F22; --surface-2:#202426; --surface-3:#282C2E;
+      --ink:#ECEDE6; --ink-soft:#A9AC9E; --ink-faint:#767A6C;
+      --border:#2E3234; --border-strong:#3B4042;
+      --accent:#63B4C8; --accent-strong:#8FD0E0; --accent-soft:#1C3338; --accent-ink:#CFEEF5;
+      --p0:#E17B67; --p0-soft:#3A241F; --p1:#E4A852; --p1-soft:#3A2E17; --p2:#CBB958; --p2-soft:#33301A; --p3:#93A8BB; --p3-soft:#232C33;
+      --ok:#7FC393; --ok-soft:#1E332;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14171A; --surface:#1B1F22; --surface-2:#202426; --surface-3:#282C2E;
+    --ink:#ECEDE6; --ink-soft:#A9AC9E; --ink-faint:#767A6C;
+    --border:#2E3234; --border-strong:#3B4042;
+    --accent:#63B4C8; --accent-strong:#8FD0E0; --accent-soft:#1C3338; --accent-ink:#CFEEF5;
+    --p0:#E17B67; --p0-soft:#3A241F; --p1:#E4A852; --p1-soft:#3A2E17; --p2:#CBB958; --p2-soft:#33301A; --p3:#93A8BB; --p3-soft:#232C33;
+    --ok:#7FC393; --ok-soft:#16281C;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box;}
+  html{background:var(--bg);}
+  body{
+    background:var(--bg); color:var(--ink); margin:0;
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    font-size:16px; line-height:1.6;
+    padding:0 20px;
+  }
+  .num{font-variant-numeric:tabular-nums; font-family:'IBM Plex Mono', ui-monospace, monospace;}
+  a{color:var(--accent-strong);}
+  h1,h2,h3{font-family:'Oswald', sans-serif; text-transform:uppercase; text-wrap:balance; letter-spacing:.01em; color:var(--ink); margin:0;}
+  p{margin:0 0 .9em; max-width:66ch;}
+  .wrap{max-width:900px; margin:0 auto; padding-block:48px 96px;}
+
+  /* HEADER */
+  .cover{
+    border:1px solid var(--border); background:var(--surface); border-radius:4px;
+    padding:38px clamp(20px,4vw,52px); margin-bottom:40px; box-shadow:var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .cover::before{
+    content:""; position:absolute; inset:0 0 auto 0; height:6px;
+    background:repeating-linear-gradient(90deg, var(--accent) 0 22px, var(--p1) 22px 26px, var(--accent) 26px 48px);
+    opacity:.9;
+  }
+  .kicker{font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-strong); margin-bottom:14px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--p1); display:inline-block;}
+  .cover h1{font-size:clamp(30px,5vw,46px); line-height:1.05; margin-bottom:10px;}
+  .cover .sub{color:var(--ink-soft); font-size:17px; max-width:56ch;}
+  .meta-row{display:flex; gap:28px; flex-wrap:wrap; margin-top:26px; padding-top:22px; border-top:1px solid var(--border);}
+  .meta-item{min-width:140px;}
+  .meta-item .k{font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-faint); margin-bottom:3px;}
+  .meta-item .v{font-family:'IBM Plex Mono',monospace; font-size:14.5px; color:var(--ink);}
+
+  /* SECTION SHELL */
+  section.sec{margin-top:56px; scroll-margin-top:24px;}
+  .eyebrow{display:flex; align-items:baseline; gap:14px; margin-bottom:18px;}
+  .eyebrow .n{font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--accent-strong); border:1px solid var(--border-strong); border-radius:3px; padding:2px 8px; background:var(--accent-soft);}
+  .eyebrow h2{font-size:clamp(20px,3vw,26px);}
+  .lede{color:var(--ink-soft); margin-bottom:20px; max-width:70ch;}
+
+  /* CARDS / GRIDS */
+  .grid{display:grid; gap:14px;}
+  .grid-2{grid-template-columns:1fr 1fr;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:760px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:18px 20px;}
+  .card h3{font-size:14px; letter-spacing:.06em; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
+  .card ul{margin:0; padding-left:18px;} .card li{margin-bottom:6px;}
+  .card p:last-child{margin-bottom:0;}
+
+  .foda .card.f{border-left:3px solid var(--ok);}
+  .foda .card.d{border-left:3px solid var(--p1);}
+  .foda .card.o{border-left:3px solid var(--accent);}
+  .foda .card.a{border-left:3px solid var(--p0);}
+
+  /* PILLS */
+  .pill{display:inline-flex; align-items:center; gap:5px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:.03em; padding:2px 8px; border-radius:3px; white-space:nowrap;}
+  .pill.p0{background:var(--p0-soft); color:var(--p0);}
+  .pill.p1{background:var(--p1-soft); color:var(--p1);}
+  .pill.p2{background:var(--p2-soft); color:var(--p2);}
+  .pill.p3{background:var(--p3-soft); color:var(--p3);}
+  .pill.ok{background:var(--ok-soft); color:var(--ok);}
+
+  .tag{display:inline-block; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); border:1px solid var(--border); border-radius:3px; padding:1px 7px; margin-right:6px;}
+
+  /* TABLES */
+  .tbl-wrap{overflow-x:auto; border:1px solid var(--border); border-radius:4px; background:var(--surface);}
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{background:var(--surface-2); font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); font-weight:600;}
+  tr:last-child td{border-bottom:none;}
+  td.num, th.num{font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums;}
+
+  /* DECISION BLOCK */
+  .decision{border:1px solid var(--border-strong); border-radius:5px; background:var(--surface); margin:22px 0;}
+  .decision .dh{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid var(--border); background:var(--surface-2); border-radius:5px 5px 0 0;}
+  .decision .dh strong{font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:15px;}
+  .dgrid{display:grid; grid-template-columns:120px 1fr; gap:0;}
+  .dgrid .k{padding:11px 18px; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); border-top:1px solid var(--border); font-family:'IBM Plex Mono',monospace;}
+  .dgrid .v{padding:11px 18px 11px 0; border-top:1px solid var(--border); font-size:14.5px;}
+  @media(max-width:600px){.dgrid{grid-template-columns:1fr;} .dgrid .k{border-top:1px solid var(--border); padding-bottom:2px;} .dgrid .v{padding-top:0;}}
+
+  /* ROADMAP */
+  .road{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  @media(max-width:760px){.road{grid-template-columns:1fr;}}
+  .road .card{border-top:3px solid var(--accent);}
+  .road .card:nth-child(2){border-top-color:var(--p1);}
+  .road .card:nth-child(3){border-top-color:var(--p0);}
+  .road .phase-label{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em;}
+  .road h3{font-size:19px; font-family:'Oswald',sans-serif; margin:4px 0 12px;}
+
+  /* TOP 10 LIST */
+  ol.top10{counter-reset:top; list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  ol.top10 li{counter-increment:top; display:grid; grid-template-columns:40px 1fr; gap:14px; align-items:start; border:1px solid var(--border); background:var(--surface); border-radius:4px; padding:13px 16px;}
+  ol.top10 li::before{content:counter(top,decimal-leading-zero); font-family:'IBM Plex Mono',monospace; font-size:20px; color:var(--accent-strong); font-weight:600;}
+  ol.top10 .t{font-weight:600; margin-bottom:2px;}
+  ol.top10 .d{color:var(--ink-soft); font-size:14px;}
+
+  /* MANDATE CLOSER */
+  .mandate{margin-top:60px; border:1px solid var(--accent-strong); border-radius:5px; background:var(--accent-soft); padding:clamp(22px,4vw,36px);}
+  .mandate .kicker{color:var(--accent-ink);}
+  .mandate h2{font-size:clamp(22px,3.4vw,30px); color:var(--accent-ink); margin-bottom:14px;}
+  .mandate ol{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:12px;}
+  .mandate ol li{padding-left:4px;}
+  .mandate ol strong{color:var(--accent-ink);}
+
+  footer{margin-top:64px; padding-top:20px; border-top:1px solid var(--border); color:var(--ink-faint); font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+  .src{font-size:12px; color:var(--ink-faint); margin-top:6px;}
+  .hyp{color:var(--p1); font-weight:600;}
+  .ver{color:var(--ok); font-weight:600;}
+
+  .bars{display:flex; flex-direction:column; gap:8px; margin-top:6px;}
+  .bar-row{display:grid; grid-template-columns:120px 1fr 60px; gap:10px; align-items:center; font-size:13px;}
+  .bar-track{background:var(--surface-2); border-radius:3px; height:10px; overflow:hidden;}
+  .bar-fill{height:100%; background:var(--accent); border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="cover">
+    <div class="kicker"><span class="dot"></span>INFORME CEO — DÍA 1 · TALLER DE MOTOS SIN NOMBRE (EX "MANUEL MOTOS")</div>
+    <h1>Auditoría 360°, estrategia de marca<br>y hoja de ruta 30/60/90</h1>
+    <p class="sub">Diagnóstico completo del negocio que arrancó ayer: 1 mecánico + 1 vendedor/administrador, mercancía llegando, POS propio ya instalado, cámaras y datáfono listos — y todavía sin nombre comercial. Basado en el código real del sistema y en investigación de mercado verificada, no en supuestos.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="k">Día de operación</div><div class="v">01</div></div>
+      <div class="meta-item"><div class="k">Equipo</div><div class="v">2 personas</div></div>
+      <div class="meta-item"><div class="k">Mercado objetivo</div><div class="v">Cali, Valle del Cauca</div></div>
+      <div class="meta-item"><div class="k">Base tecnológica</div><div class="v">POS propio (Electron+SQLite)</div></div>
+      <div class="meta-item"><div class="k">Marca</div><div class="v">Por definir</div></div>
+    </div>
+  </div>
+
+  <!-- 01 DIAGNOSTICO -->
+  <section class="sec" id="s01">
+    <div class="eyebrow"><span class="n">01</span><h2>Diagnóstico actual</h2></div>
+    <p class="lede">No parten de cero en infraestructura — parten de cero en marca, catálogo cargado y primeros clientes. Ese matiz cambia la prioridad de esta semana.</p>
+    <div class="grid grid-2 foda">
+      <div class="card f"><h3>💪 FORTALEZAS</h3><ul>
+        <li>Sistema POS/contable propio ya funcionando: ventas, kardex, taller con órdenes de trabajo, cartera, caja y contabilidad con PUC colombiano — la mayoría de negocios en esta etapa arranca con un cuaderno.</li>
+        <li>Infraestructura física lista antes de la primera venta: cámaras de seguridad y datáfono instalados.</li>
+        <li>Estructura liviana (2 personas) = decisiones inmediatas, sin burocracia.</li>
+        <li>El segmento de mercado que domina Colombia (motos 101-125cc, exentas de impuesto) es exactamente el segmento popular de bajo costo de reparación — coincide con un taller que arranca sin flota de herramienta especializada en alto cilindraje.</li>
+      </ul></div>
+      <div class="card d"><h3>⚠️ DEBILIDADES</h3><ul>
+        <li>Sin nombre, sin marca, sin presencia digital — cero visibilidad en Google/Instagram el día en que la competencia ya lleva años posicionada.</li>
+        <li>Catálogo de inventario aún no cargado al POS (la mercancía llega mañana) → cero capacidad de vender por catálogo/redes hasta que se registre.</li>
+        <li>Usuario admin de fábrica (<code class="num">admin/admin123</code>) sin cambiar — riesgo de seguridad básico.</li>
+        <li>Marca/textos del sistema heredados de "Manuel Motos", un negocio que no existe — riesgo de que un cliente vea el nombre equivocado en una factura o en la ventana de la app.</li>
+        <li>Cero historial de ventas/clientes → todavía no hay manera de calcular CAC, LTV, ticket promedio real ni recompra (ver sección 15).</li>
+      </ul></div>
+      <div class="card o"><h3>🎯 OPORTUNIDADES</h3><ul>
+        <li>Mercado macro en máximo histórico: +1,1M motos nuevas matriculadas en Colombia en 2025 (+35% interanual) y Valle del Cauca es el 3er departamento en registros.</li>
+        <li>Competencia en Cali digitalmente débil: perfiles de Instagram con 88-1.500 seguidores, sin evidencia de gestión activa de reseñas de Google — la barra para diferenciarse digitalmente es baja.</li>
+        <li>50% de las motos que circulan en Cali son "foráneas" (matriculadas en otro municipio) → el universo real de clientes potenciales es mayor al que sugieren las cifras de matrícula local.</li>
+        <li>Mantenimiento recurrente (cada 1-3 meses en uso intensivo) sustenta un modelo de recompra si se instrumenta seguimiento — hoy el POS no lo hace automáticamente.</li>
+      </ul></div>
+      <div class="card a"><h3>🚨 AMENAZAS</h3><ul>
+        <li>Sin nombre ni marca, cualquier gasto en publicidad hoy se perdería (no hay qué recordar). Gastar en marketing antes de fijar naming sería quemar presupuesto.</li>
+        <li>Mercado de repuestos con jugadores establecidos con distribución oficial (ej. Manuel Chávez, distribuidor autorizado Bajaj/Yamaha/Honda) — competir de frente en precio de repuestos originales es perder margen desde el día 1.</li>
+        <li>Régimen arancelario reciente (35-40% a motos/vehículos importados desde dic. 2025) — si el negocio planea importar repuestos sueltos, no hay claridad normativa específica todavía (vacío de información, no arancel confirmado para partes sueltas).</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 02 PROBLEMAS -->
+  <section class="sec" id="s02">
+    <div class="eyebrow"><span class="n">02</span><h2>Problemas encontrados</h2></div>
+    <div class="tbl-wrap"><table>
+      <tr><th>Prioridad</th><th>Problema</th><th>Por qué importa hoy</th></tr>
+      <tr><td><span class="pill p0">P0</span></td><td>No hay nombre comercial ni marca definida</td><td>Bloquea Google Business Profile, Instagram, WhatsApp Business, señalización, facturas — todo lo demás de marketing depende de esto.</td></tr>
+      <tr><td><span class="pill p0">P0</span></td><td>Usuario admin de fábrica sin cambiar</td><td>Cualquiera con el manual del sistema entra como administrador.</td></tr>
+      <tr><td><span class="pill p1">P1</span></td><td>Catálogo de productos vacío en el POS</td><td>La mercancía llega mañana; si no se registra con código/costo/precio/categoría desde el primer día, se pierde trazabilidad de margen y stock desde el inicio.</td></tr>
+      <tr><td><span class="pill p1">P1</span></td><td>Marca "Manuel Motos" sigue visible en login, sidebar, título de ventana y PDFs</td><td>Un cliente puede recibir una factura con el nombre equivocado si se empieza a vender antes de rebrandear.</td></tr>
+      <tr><td><span class="pill p2">P2</span></td><td>Ventas no siempre asociadas a un cliente (`client_id` opcional)</td><td>Sin cliente identificado no se puede medir recompra, ni construir campañas de reactivación — hábito a instalar desde la venta #1.</td></tr>
+      <tr><td><span class="pill p2">P2</span></td><td>No existe cotización previa a la venta/orden de trabajo</td><td>El cliente que "solo está preguntando precio" no queda registrado en ningún lado — se pierde el dato del lead.</td></tr>
+      <tr><td><span class="pill p3">P3</span></td><td>Nombre de archivo de BD y `productName` hardcodeados en ~19 archivos</td><td>El rebranding técnico no es un cambio de una sola línea; hay que hacerlo ordenado (ver sección 05) y planear la migración de la carpeta de datos si ya hay ventas capturadas.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 03 OPORTUNIDADES -->
+  <section class="sec" id="s03">
+    <div class="eyebrow"><span class="n">03</span><h2>Oportunidades</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>📍 Vacío digital local</h3><p>Ningún competidor identificado en Cali combina Google Business Profile optimizado + gestión activa de reseñas + WhatsApp Business profesional. El primero en hacerlo bien captura búsquedas de "taller de motos cerca de mí" con poca competencia real.</p></div>
+      <div class="card"><h3>🔧 Combo de mantenimiento</h3><p>Cadena/piñón, frenos, filtros y batería son a la vez los repuestos de mayor rotación y los de mantenimiento más frecuente (cada 3.000-10.000 km). Un "combo de mantenimiento" fijo es a la vez producto ancla de marketing y palanca de recompra.</p></div>
+      <div class="card"><h3>📋 Pre-revisión técnico-mecánica</h3><p>Desde 2025 el CDA exige SOAT vigente para expedir la RTM. Ofrecer "pre-revisión" antes de la cita en el CDA (como ya hace un competidor, MotoPunto) es un servicio de bajo costo que genera visitas recurrentes y confianza.</p></div>
+    </div>
+  </section>
+
+  <!-- 04 RIESGOS -->
+  <section class="sec" id="s04">
+    <div class="eyebrow"><span class="n">04</span><h2>Riesgos</h2></div>
+    <div class="tbl-wrap"><table>
+      <tr><th>Riesgo</th><th>Tipo</th><th>Mitigación</th></tr>
+      <tr><td>Competir por precio contra distribuidores oficiales (repuestos originales)</td><td>Comercial</td><td>Diferenciar por servicio/rapidez/confianza (regla 13 del mandato del negocio), no por ser el más barato en repuesto original.</td></tr>
+      <tr><td>Elegir nombre ya usado por otro negocio de motos en Cali/Valle</td><td>Legal/marca</td><td>Ver sección 09 — descartamos 3 candidatos obvios por saturación en el registro mercantil (RUES) antes de proponer los finales.</td></tr>
+      <tr><td>Gastar en publicidad antes de tener catálogo cargado y marca fija</td><td>Financiero</td><td>Secuencia obligatoria: nombre → mínimo de catálogo cargado → ficha de Google/Instagram → recién ahí, primer peso en pauta.</td></tr>
+      <tr><td>Password hash SHA-256 sin salt y sesión solo en memoria del proceso</td><td>Técnico/seguridad</td><td>No es urgente cambiar el algoritmo hoy (equipo de 2 personas, riesgo bajo), pero sí cambiar la contraseña por defecto ya mismo.</td></tr>
+      <tr><td>Migración del path de datos (`userData`) al cambiar `productName` en el instalador</td><td>Técnico</td><td>Rebrandear <em>antes</em> de acumular muchas ventas reales, o copiar manualmente la carpeta de datos a la nueva ruta al momento del cambio.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 05 REPO -->
+  <section class="sec" id="s05">
+    <div class="eyebrow"><span class="n">05</span><h2>Análisis del repositorio</h2></div>
+    <p class="lede">El sistema es una app Electron (React 19 + Vite) con SQLite vía Drizzle/better-sqlite3. No es un MVP a medias: cubre ventas, inventario con kardex, clientes, motos por placa, taller con máquina de estados de órdenes de trabajo, mecánicos con liquidación de "patio", compras, cartera con aging y contabilidad completa con PUC colombiano (asientos, mayor, balance). El dashboard ya calcula ventas del día/mes, margen bruto, stock crítico, cartera vencida y top 10 productos/mecánicos.</p>
+    <div class="grid grid-2">
+      <div class="card"><h3 style="color:var(--ok)">✅ REUTILIZABLE (no tocar)</h3><ul>
+        <li>Las 24 tablas del modelo de datos completo — genérico para cualquier taller de motos colombiano, nada pertenece al negocio anterior.</li>
+        <li>Los 14 servicios de negocio (ventas, taller, inventario, compras, créditos, contabilidad, caja, reportes, dashboard).</li>
+        <li>Categorías semilla de repuestos (Frenos, Motor, Suspensión, Transmisión, Eléctrico, etc.) y el Plan de Cuentas PUC Colombia.</li>
+        <li>Roles de usuario (admin/cajero/mecánico/supervisor) y exportación/importación Excel por módulo.</li>
+      </ul></div>
+      <div class="card"><h3 style="color:var(--p1)">✏️ MODIFICABLE (rebranding)</h3><ul>
+        <li><code>empresa_nombre</code> y datos de empresa — <strong>ya editable desde Ajustes → Empresa sin tocar código.</strong></li>
+        <li>Paleta verde de marca (Tailwind v4, `main.css`/`globals.css`) y logo (`src/assets/logo.jpeg`).</li>
+        <li>Texto "Manuel Motos" hardcodeado en: `index.html` (title), `main/index.ts` (ventana + `setAppUserModelId`), `Sidebar.tsx`, `LoginPage.tsx`, `Topbar.tsx` (fallback), `shared/constants/index.ts` (`APP_NAME`).</li>
+        <li>`package.json`/`electron-builder.yml` (`name`, `productName`, `appId`, `executableName`) y nombre de archivo `manuelmotos.db` (hardcodeado en 3 sitios en vez de reusar la constante `DB_FILE`).</li>
+      </ul></div>
+    </div>
+    <div class="grid grid-2" style="margin-top:14px;">
+      <div class="card"><h3 style="color:var(--ink-faint)">🗑️ ELIMINABLE</h3><p>Nada del modelo de datos o la lógica de negocio pertenece exclusivamente al negocio anterior. Lo único 100% ligado a "Manuel Motos" es el nombre, el logo y la paleta de color — todo lo demás es infraestructura genérica de taller.</p></div>
+      <div class="card"><h3 style="color:var(--p0)">🧩 FALTANTE (construir)</h3><ul>
+        <li>CRM/marketing: leads, origen de cliente, campañas, CAC.</li>
+        <li>Cotizaciones previas a venta/OT, recordatorios de mantenimiento, WhatsApp Business real (hoy solo abre <code>wa.me</code> con clic manual).</li>
+        <li>Clasificación ABC/XYZ de inventario y reorden automático (hoy solo alerta simple <code>stock ≤ min_stock</code>).</li>
+        <li>Analítica histórica multi-mes, cohortes, LTV — hoy el dashboard es del mes en curso, sin comparativas.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 06 MERCADO -->
+  <section class="sec" id="s06">
+    <div class="eyebrow"><span class="n">06</span><h2>Análisis del mercado</h2></div>
+    <p class="lede">Investigación con fuentes verificables (ANDI, Fenalco, El Colombiano, Infobae, La República, El País Cali). Donde las fuentes no coinciden, se muestra el rango en vez de inventar una cifra única.</p>
+    <div class="tbl-wrap"><table>
+      <tr><th>Dato</th><th>Cifra</th><th>Estado</th><th>Fuente</th></tr>
+      <tr><td>Motos nuevas matriculadas en Colombia, 2025</td><td class="num">&gt;1.1 millones (+35% vs 2024)</td><td><span class="ver">VERIFICADO</span></td><td>ANDI / Fenalco</td></tr>
+      <tr><td>Puesto de Colombia en el mercado mundial de motos</td><td class="num">10º (2025)</td><td><span class="ver">VERIFICADO</span></td><td>Infobae</td></tr>
+      <tr><td>Parque circulante de motos en Colombia</td><td class="num">9,4M – 13,4M (rango, fuentes no coinciden)</td><td><span class="hyp">RANGO</span></td><td>Infobae / El Colombiano / La República</td></tr>
+      <tr><td>Registros de motos en Valle del Cauca, 2025</td><td class="num">117.624 (10,69% nacional, 3er depto.)</td><td><span class="ver">VERIFICADO</span></td><td>La República</td></tr>
+      <tr><td>Motos que circulan en Cali matriculadas en otro municipio</td><td class="num">~50%</td><td><span class="ver">VERIFICADO</span></td><td>El País Cali</td></tr>
+      <tr><td>Cilindraje dominante en ventas</td><td class="num">101-125cc = 52,4%</td><td><span class="ver">VERIFICADO</span></td><td>Infobae (exención tributaria de bajo cilindraje)</td></tr>
+      <tr><td>Marcas líderes 2025</td><td>Bajaj, AKT, Yamaha, Suzuki, Honda</td><td><span class="ver">VERIFICADO</span></td><td>ANDI/Fenalco vía El Colombiano</td></tr>
+      <tr><td>Margen en repuestos mecánicos básicos</td><td class="num">20-35% (estimado)</td><td><span class="hyp">HIPÓTESIS</span></td><td>Sin estudio específico Colombia — validar con Dismerca/Impocali</td></tr>
+      <tr><td>Margen en accesorios/personalización</td><td class="num">40-60%+</td><td><span class="hyp">PARCIAL</span></td><td>Motodinamia (fuente comercial)</td></tr>
+    </table></div>
+    <p class="src">Repuestos de mayor rotación (verificado, múltiples distribuidores): kit de arrastre (cadena/piñón/catalina), baterías, frenos (pastillas/discos/bombas), filtros (aire/aceite/combustible), bujías/cables/bombillos. Frecuencia de cambio de aceite: mineral 3.000-4.000km, semisintético 5.000-7.000km, sintético 7.000-10.000km, o cada 6 meses lo que ocurra primero.</p>
+  </section>
+
+  <!-- 07 COMPETENCIA -->
+  <section class="sec" id="s07">
+    <div class="eyebrow"><span class="n">07</span><h2>Análisis de competencia (Cali)</h2></div>
+    <p class="lede">8 negocios reales identificados con evidencia de búsqueda (no inventados). Patrón dominante: presencia fragmentada, pocos seguidores, canal de venta = WhatsApp directo al número personal.</p>
+    <div class="tbl-wrap"><table>
+      <tr><th>Negocio</th><th>Zona</th><th>Qué ofrece</th><th>Señal digital</th></tr>
+      <tr><td>Manuel Chávez Almacén y Taller</td><td>Kr 93 #2C-61</td><td>Multimarca, distribuidor autorizado Bajaj/Yamaha/Honda/Motul/Auteco</td><td>Sitio propio + tienda online</td></tr>
+      <tr><td>MotoPunto</td><td>Cali</td><td>Sincronización de gases, pre-revisión técnico-mecánica</td><td>Google Maps</td></tr>
+      <tr><td>Moto Repuestos Borja</td><td>Prados del Sur</td><td>Repuestos originales de segunda mano</td><td>IG 1.461 seguidores</td></tr>
+      <tr><td>Moto Repuestos Calle 40</td><td>Atanasio Girardot</td><td>Repuestos</td><td>IG 1.297 seguidores</td></tr>
+      <tr><td>Moto Repuestos El Caney</td><td>Cl 25 #83C-173</td><td>Repuestos + servicio mecánico/eléctrico</td><td>IG activo</td></tr>
+      <tr><td>Todo Repuestos Motos Cali</td><td>—</td><td>Mayorista/detal con domicilio</td><td>IG 88 seguidores</td></tr>
+      <tr><td>Honda Cali Roosevelt</td><td>Av. Roosevelt #27-65</td><td>Concesionario oficial Honda</td><td>IG marca oficial</td></tr>
+      <tr><td>Casamotos</td><td>Cl 15 #15-20</td><td>Repuestos multimarca</td><td>Sin redes activas detectadas</td></tr>
+    </table></div>
+    <p class="src">Lectura estratégica: ninguno de los 8 muestra evidencia de gestión activa de reseñas de Google (a diferencia del sector de talleres de carro, donde sí se ve). Esa brecha es la oportunidad de diferenciación más barata de capturar.</p>
+  </section>
+
+  <!-- 08 ESTRATEGIA COMERCIAL -->
+  <section class="sec" id="s08">
+    <div class="eyebrow"><span class="n">08</span><h2>Estrategia comercial</h2></div>
+    <p class="lede">No competir por precio en repuesto original. Competir en: velocidad de respuesta, transparencia del diagnóstico, garantía por escrito y que el cliente reciba seguimiento (algo que ningún competidor identificado hace de forma visible).</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>Producto ancla</h3><p>Combo de mantenimiento periódico: cambio de aceite + revisión de frenos + filtros, precio fijo, publicado. Es lo que más rota y lo que genera la próxima visita.</p></div>
+      <div class="card"><h3>Ticket secundario</h3><p>Pre-revisión técnico-mecánica antes del CDA — servicio corto, barato de dar, alta confianza generada, motiva revisión de SOAT/RTM que la ley ya exige verificar.</p></div>
+      <div class="card"><h3>Regla de precio</h3><p>Genéricos de marca reputada en piezas de desgaste (filtros, bujías, pastillas) para competir en precio sin sacrificar margen; originales/certificados en piezas de motor cuando la moto es herramienta de trabajo del cliente.</p></div>
+    </div>
+  </section>
+
+  <!-- 09 MARKETING + NAMING -->
+  <section class="sec" id="s09">
+    <div class="eyebrow"><span class="n">09</span><h2>Estrategia de marketing y naming</h2></div>
+    <p class="lede">Todo lo demás de marketing espera a esto. Se evaluaron y <strong>descartaron</strong> tres direcciones obvias por saturación real en el Registro Único Empresarial (RUES) antes de proponer las finales.</p>
+    <div class="tbl-wrap"><table>
+      <tr><th>Descartado</th><th>Hallazgo en RUES</th></tr>
+      <tr><td>"MotoPro"</td><td>37 coincidencias nacionales, incluida una en Cali ("Motopro Cascos y Accesorios", cancelada en 2025) — término saturado.</td></tr>
+      <tr><td>"RodaMotos"</td><td>20 coincidencias, con una activa en Palmira (Valle del Cauca, área metropolitana de Cali) — riesgo de confusión regional.</td></tr>
+      <tr><td>"Full Moto"</td><td>Combinación extremadamente común ("Full Moto(s)", "Fullmotor") incluida una en Jamundí, a minutos de Cali.</td></tr>
+    </table></div>
+    <p class="src">Nota metodológica: la búsqueda en RUES es difusa (empareja por palabra suelta), así que estos hallazgos son <span class="hyp">señal de saturación</span>, no un conteo exacto — pero la señal es consistente: nombres "Moto + adjetivo genérico" ya están tomados muchas veces.</p>
+
+    <h3 style="margin:26px 0 12px; font-size:16px;">Candidatos recomendados (0-4 coincidencias en RUES, ninguna activa en Cali/Valle)</h3>
+    <div class="tbl-wrap"><table>
+      <tr><th>Nombre</th><th>Por qué funciona</th><th>RUES</th><th>Veredicto</th></tr>
+      <tr><td><strong>Bujía</strong> <span class="tag">top pick</span></td><td>Término que todo motociclista reconoce; metáfora de "la chispa que enciende" — coherente con ser un negocio que empieza. Corto, fácil de pronunciar y de convertir en handle.</td><td class="num">0 coincidencias</td><td><span class="pill ok">Disponible</span></td></tr>
+      <tr><td><strong>Piñón</strong></td><td>Pieza visible e icónica de transmisión; connota precisión ("todo engrana"). Vocabulario técnico real, no inventado.</td><td class="num">4, todas canceladas, ninguna en Cali</td><td><span class="pill ok">Disponible</span></td></tr>
+      <tr><td><strong>Motiva</strong></td><td>Juego con "moto" + "motivar/impulsar"; más cálido, expandible a ropa/accesorios/lifestyle si el negocio crece más allá de repuestos.</td><td class="num">0 coincidencias</td><td><span class="pill ok">Disponible</span></td></tr>
+    </table></div>
+    <p class="src">Verificación final pendiente (no realizable desde aquí): disponibilidad exacta en Cámara de Comercio de Cali, handle de Instagram/TikTok y dominio .com/.co antes de comprometerse — la búsqueda de RUES y web reduce el riesgo, no lo elimina.</p>
+
+    <h3 style="margin:26px 0 12px; font-size:16px;">Secuencia de captación (bajo costo primero)</h3>
+    <div class="bars">
+      <div class="bar-row"><span>Google Business Profile</span><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div><span class="num">Semana 1</span></div>
+      <div class="bar-row"><span>WhatsApp Business</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><span class="num">Semana 1</span></div>
+      <div class="bar-row"><span>Instagram (antes/después + tips)</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div><span class="num">Semana 2</span></div>
+      <div class="bar-row"><span>Señalización física + vitrina</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="num">Semana 2</span></div>
+      <div class="bar-row"><span>Grupos locales / referidos</span><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div><span class="num">Semana 3</span></div>
+      <div class="bar-row"><span>Pauta paga (Meta/TikTok)</span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><span class="num">Mes 2+</span></div>
+    </div>
+    <p class="src">Formato de mayor conversión según fuentes especializadas: "antes/después" de la moto entrando vs. saliendo del taller, más contenido educativo de mantenimiento (autoridad, no venta directa).</p>
+  </section>
+
+  <!-- 10 INVENTARIO -->
+  <section class="sec" id="s10">
+    <div class="eyebrow"><span class="n">10</span><h2>Estrategia de inventario</h2></div>
+    <p class="lede">El POS ya tiene kardex y alerta simple de stock mínimo. Falta la capa de clasificación — que ahora sí puede calcularse con la skill <code>analizar-negocio-motos</code> en cuanto haya ventas reales (día 1 no alcanza para clasificar, y eso está bien).</p>
+    <div class="grid grid-2">
+      <div class="card"><h3>Comprar primero (alta rotación verificada)</h3><ul><li>Kit de arrastre: cadena, piñón, catalina</li><li>Pastillas/bandas de freno, discos</li><li>Filtros de aire, aceite y combustible</li><li>Bujías, cables de alta, bombillos</li><li>Baterías</li><li>Aceites por tipo de motor (mineral/semisintético/sintético)</li></ul></div>
+      <div class="card"><h3>Método de clasificación (a 90 días de ventas)</h3><p>ABC por ingreso acumulado (A=80%, B=95%, C=resto) + punto de reposición = venta diaria promedio × tiempo de entrega del proveedor + stock de seguridad. El script de la skill ya calcula la clase ABC y el inventario inmovilizado (sin venta en 60 días) automáticamente.</p></div>
+    </div>
+  </section>
+
+  <!-- 11 FINANCIERA -->
+  <section class="sec" id="s11">
+    <div class="eyebrow"><span class="n">11</span><h2>Estrategia financiera</h2></div>
+    <p class="lede">Ventas ≠ ingresos disponibles ≠ utilidad. El sistema ya calcula margen bruto mensual y cartera; falta disciplina de uso, no funcionalidad.</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>Regla de caja</h3><p>Separar desde el día 1: cuenta de reposición de inventario, cuenta de gastos fijos (arriendo, servicios), cuenta de utilidad del dueño. No mezclar "lo que entra" con "lo que se puede gastar".</p></div>
+      <div class="card"><h3>Precio piso</h3><p>Costo + margen mínimo del <span class="hyp">20%</span> en repuestos de alta rotación (hipótesis a validar con proveedores locales), nunca vender bajo costo por conseguir el primer cliente.</p></div>
+      <div class="card"><h3>Cartera/crédito</h3><p>El sistema ya tiene aging de cartera (al_dia/próximo/vencido) — úsalo desde la primera venta a crédito; no fiar sin registrar en el POS.</p></div>
+    </div>
+  </section>
+
+  <!-- 12 ARQUITECTURA TECNOLOGICA -->
+  <section class="sec" id="s12">
+    <div class="eyebrow"><span class="n">12</span><h2>Arquitectura tecnológica</h2></div>
+    <div class="tbl-wrap"><table>
+      <tr><th>Capa</th><th>Tecnología</th></tr>
+      <tr><td>Escritorio</td><td>Electron 39 + electron-vite (Windows/macOS/Linux)</td></tr>
+      <tr><td>UI</td><td>React 19 + React Router + Zustand + Tailwind CSS v4 + Radix UI</td></tr>
+      <tr><td>Datos</td><td>SQLite (better-sqlite3, modo WAL) + Drizzle ORM (schema) — la lógica usa SQL directo</td></tr>
+      <tr><td>Documentos</td><td>Generación de PDF de facturas/OT, export/import Excel (exceljs/xlsx)</td></tr>
+      <tr><td>Empaquetado</td><td>electron-builder (NSIS/dmg/AppImage)</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 13 ARQUITECTURA AGENTES -->
+  <section class="sec" id="s13">
+    <div class="eyebrow"><span class="n">13</span><h2>Arquitectura de agentes</h2></div>
+    <p class="lede">Se construyó hoy el primero: <code>ceo-motos</code>, en <code>.claude/agents/ceo-motos.md</code>. Los demás quedan diseñados y priorizados, no todos construidos — construirlos todos el día 1 sería automatizar antes de tener datos que automatizar.</p>
+    <div class="tbl-wrap"><table>
+      <tr><th>Agente</th><th>Rol</th><th>Estado</th></tr>
+      <tr><td><strong>CEO Agent</strong></td><td>Coordina decisiones, prioriza P0-P3, aplica el framework de 9 pasos</td><td><span class="pill ok">Construido hoy</span></td></tr>
+      <tr><td>Data / Research Agent</td><td>Extrae KPIs del POS e investiga mercado/competencia bajo demanda</td><td><span class="pill p2">Cubierto por skill + WebSearch del CEO Agent</span></td></tr>
+      <tr><td>Inventory Agent</td><td>ABC/XYZ, punto de reorden, sugerencias de compra</td><td><span class="pill p1">Pendiente — activar con ≥90 días de ventas</span></td></tr>
+      <tr><td>Marketing Agent</td><td>Calendario de contenido, gestión de reseñas, campañas</td><td><span class="pill p1">Pendiente — activar tras fijar naming/marca</span></td></tr>
+      <tr><td>Finance/Operations Agent</td><td>Flujo de caja, unit economics, productividad del taller</td><td><span class="pill p3">Pendiente — activar con ≥60 días de operación</span></td></tr>
+    </table></div>
+  </section>
+
+  <!-- 14 SKILLS -->
+  <section class="sec" id="s14">
+    <div class="eyebrow"><span class="n">14</span><h2>Skills necesarias</h2></div>
+    <div class="tbl-wrap"><table>
+      <tr><th>Skill</th><th>Qué hace</th><th>Estado</th></tr>
+      <tr><td><code>analizar-negocio-motos</code></td><td>Lee la BD SQLite real del POS y calcula ventas, margen, ABC de inventario, taller por mecánico, clientes y cartera, con alertas P0-P3</td><td><span class="pill ok">Construida hoy</span></td></tr>
+      <tr><td><code>investigar-competencia</code></td><td>Búsqueda estructurada de competidores por zona con hallazgo→conclusión→acción</td><td><span class="pill p2">Cubierta hoy vía WebSearch directo del CEO Agent</span></td></tr>
+      <tr><td><code>recomendar-compra</code></td><td>Sugerir orden de compra a proveedor según ABC + punto de reposición</td><td><span class="pill p1">Pendiente — requiere ≥90 días de datos de venta</span></td></tr>
+      <tr><td><code>calcular-unit-economics</code></td><td>CAC, LTV, ticket promedio, recompra por canal de adquisición</td><td><span class="pill p1">Pendiente — requiere capturar origen del cliente (no existe ese campo hoy)</span></td></tr>
+      <tr><td><code>generar-dashboard</code></td><td>Convertir la salida de <code>analizar-negocio-motos</code> en un Artifact visual para revisión semanal</td><td><span class="pill p2">Pendiente — bajo demanda</span></td></tr>
+    </table></div>
+  </section>
+
+  <!-- 15 KPIs -->
+  <section class="sec" id="s15">
+    <div class="eyebrow"><span class="n">15</span><h2>KPIs a mirar desde ya</h2></div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Financiero / Comercial</h3><ul>
+        <li>Ventas del día / semana / mes (ya en el dashboard)</li>
+        <li>Ticket promedio (ya en el dashboard)</li>
+        <li>Margen bruto % (ya en el dashboard)</li>
+        <li>% de ventas con cliente identificado (nuevo — hoy no se mide)</li>
+      </ul></div>
+      <div class="card"><h3>Inventario / Taller / Marketing</h3><ul>
+        <li>Productos en/bajo stock mínimo (ya en el dashboard)</li>
+        <li>Clase ABC y valor de inventario inmovilizado (nuevo — vía skill)</li>
+        <li>OT abiertas hace &gt;3 días, ticket promedio por OT, productividad por mecánico (ya en el dashboard)</li>
+        <li>Reseñas de Google, seguidores IG, mensajes de WhatsApp recibidos por semana (nuevo — no existe hoy en el POS, llevar aparte hasta que valga la pena integrarlo)</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 16 ACCIONES INMEDIATAS -->
+  <section class="sec" id="s16">
+    <div class="eyebrow"><span class="n">16</span><h2>Acciones inmediatas (formato de decisión)</h2></div>
+
+    <div class="decision">
+      <div class="dh"><strong>Elegir el nombre definitivo</strong><span class="pill p0">P0</span></div>
+      <div class="dgrid">
+        <div class="k">Datos</div><div class="v">3 candidatos con 0-4 coincidencias en RUES y ninguna activa en Cali/Valle: Bujía, Piñón, Motiva (sección 09).</div>
+        <div class="k">Opciones</div><div class="v">Elegir hoy entre los 3, o pedir una ronda más de variantes.</div>
+        <div class="k">Recomendación</div><div class="v">"Bujía" — mejor narrativa para un negocio que empieza, más corto para logo/rótulo.</div>
+        <div class="k">Costo</div><div class="v">$0 decidir; costo de rótulo/tarjetas depende del proveedor local.</div>
+        <div class="k">Acción</div><div class="v">Decidir hoy, verificar handle IG/dominio, y avisar para actualizar los ~19 archivos del rebranding técnico (sección 05).</div>
+        <div class="k">Métrica</div><div class="v">Nombre fijo antes de la primera publicación en redes.</div>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="dh"><strong>Cambiar contraseña de administrador por defecto</strong><span class="pill p0">P0</span></div>
+      <div class="dgrid">
+        <div class="k">Datos</div><div class="v">Usuario semilla <code>admin</code> / <code>admin123</code> sin cambiar.</div>
+        <div class="k">Acción</div><div class="v">Cambiarla hoy mismo desde Ajustes → Usuarios.</div>
+        <div class="k">Métrica</div><div class="v">Contraseña por defecto ya no funciona.</div>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="dh"><strong>Cargar el catálogo con la mercancía que llega mañana</strong><span class="pill p0">P0</span></div>
+      <div class="dgrid">
+        <div class="k">Datos</div><div class="v">Categorías ya existen (Frenos, Motor, Filtros, etc.); catálogo de productos vacío.</div>
+        <div class="k">Acción</div><div class="v">Registrar cada producto con código, costo, precio de venta y stock mínimo al recibir la mercancía — no dejarlo para "después".</div>
+        <div class="k">Métrica</div><div class="v">100% de la mercancía recibida con código en el sistema antes de la primera venta de ese producto.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17 ROADMAP -->
+  <section class="sec" id="s17">
+    <div class="eyebrow"><span class="n">17</span><h2>Roadmap 30 / 60 / 90 días</h2></div>
+    <div class="road">
+      <div class="card">
+        <div class="phase-label">Fase 1 · Días 1-30</div>
+        <h3>Sobrevivir y validar</h3>
+        <ul><li>Nombre, logo, rebranding técnico completo</li><li>Catálogo cargado al 100% al recibir mercancía</li><li>Google Business Profile + WhatsApp Business activos</li><li>Todas las ventas con cliente asociado</li><li>Primer combo de mantenimiento publicado</li></ul>
+      </div>
+      <div class="card">
+        <div class="phase-label">Fase 2 · Días 31-60</div>
+        <h3>Rentabilizar</h3>
+        <ul><li>Primera corrida de <code>analizar-negocio-motos</code> con datos reales de 30 días</li><li>Clasificación ABC real de inventario</li><li>Calendario de contenido (antes/después + tips) en marcha</li><li>Primeras reseñas de Google solicitadas al entregar la moto</li></ul>
+      </div>
+      <div class="card">
+        <div class="phase-label">Fase 3 · Días 61-90</div>
+        <h3>Sistematizar</h3>
+        <ul><li>Recordatorios de próximo mantenimiento por WhatsApp a clientes con &gt;60 días sin visita</li><li>Punto de reposición automático para clase A de inventario</li><li>Primera campaña paga pequeña, medida contra CAC estimado</li><li>Revisar si vale activar Inventory Agent / Marketing Agent (sección 13)</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18 TOP 10 -->
+  <section class="sec" id="s18">
+    <div class="eyebrow"><span class="n">18</span><h2>Las 10 acciones de mayor impacto</h2></div>
+    <ol class="top10">
+      <li><div><div class="t">Elegir el nombre hoy (Bujía / Piñón / Motiva)</div><div class="d">Desbloquea todo lo demás de marca y marketing.</div></div></li>
+      <li><div><div class="t">Cambiar la contraseña de administrador por defecto</div><div class="d">5 minutos, riesgo básico cerrado.</div></div></li>
+      <li><div><div class="t">Cargar el catálogo completo al recibir la mercancía mañana</div><div class="d">Sin esto no hay trazabilidad de margen ni de stock desde el día 1.</div></div></li>
+      <li><div><div class="t">Crear Google Business Profile y WhatsApp Business</div><div class="d">Los dos canales de mayor conversión y menor costo según la investigación (sección 09).</div></div></li>
+      <li><div><div class="t">Asociar cliente a cada venta, sin excepción</div><div class="d">Es la única forma de medir recompra y activar reactivación después.</div></div></li>
+      <li><div><div class="t">Publicar el combo de mantenimiento como producto ancla</div><div class="d">Coincide con los repuestos de mayor rotación y la frecuencia real de mantenimiento.</div></div></li>
+      <li><div><div class="t">Rebrandear los ~19 archivos con "Manuel Motos" antes de la primera venta real</div><div class="d">Evita facturas o pantallas con el nombre equivocado frente a un cliente.</div></div></li>
+      <li><div><div class="t">Pedir reseña de Google al momento de entregar cada moto</div><div class="d">Ningún competidor identificado lo hace de forma visible — ventaja barata.</div></div></li>
+      <li><div><div class="t">Correr <code>analizar-negocio-motos</code> cada semana desde ya</div><div class="d">Aunque el volumen sea bajo, instala el hábito de decidir con datos, no con intuición.</div></div></li>
+      <li><div><div class="t">No pautar en redes todavía</div><div class="d">Sin nombre fijo ni catálogo cargado, cualquier peso en publicidad hoy se pierde.</div></div></li>
+    </ol>
+  </section>
+
+  <div class="mandate">
+    <div class="kicker"><span class="dot"></span>MANDATO DEL CEO</div>
+    <h2>Si yo fuera el CEO, esto es lo que haría mañana</h2>
+    <ol>
+      <li><strong>Antes de abrir:</strong> decidir el nombre entre Bujía / Piñón / Motiva, cambiar la contraseña de admin, y confirmar con el mecánico el horario de recepción de mercancía.</li>
+      <li><strong>Al recibir la mercancía:</strong> registrar cada producto en el POS con código, costo y precio antes de dejarlo en el estante — no "después con calma".</li>
+      <li><strong>Antes del mediodía:</strong> crear la ficha de Google Business Profile y el perfil de WhatsApp Business con el nombre ya decidido, aunque el logo definitivo tarde unos días más.</li>
+      <li><strong>Con la primera venta real:</strong> registrarla siempre con cliente asociado, y si es a crédito, cargarla en el módulo de cartera — no fiar por fuera del sistema.</li>
+      <li><strong>Al cerrar el día:</strong> tomar una foto de "antes" de alguna moto que quede pendiente para taller mañana — es el primer contenido de la cuenta nueva.</li>
+      <li><strong>Antes de dormir:</strong> no gastar un peso en pauta todavía. Ese dinero vale más la próxima semana, con nombre fijo y catálogo cargado.</li>
+    </ol>
+  </div>
+
+  <footer>
+    <span>Informe generado a partir de auditoría técnica del repositorio + investigación de mercado con fuentes citadas en sección 06-07.</span>
+    <span>Agente <code>ceo-motos</code> y skill <code>analizar-negocio-motos</code> disponibles en el repo para el próximo chequeo.</span>
+  </footer>
+
+</div>
+</body>
+</html>
