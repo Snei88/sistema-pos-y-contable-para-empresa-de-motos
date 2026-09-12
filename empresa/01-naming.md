@@ -1,6 +1,14 @@
 # Naming y marca
 
-Estado: 🟡 "Cadena" descartado por el dueño (no convenció). En ronda 3, informada por investigación real de marcas que sí funcionaron en otras ciudades/países — ver sección siguiente antes de los candidatos.
+Estado: ✅ **NOMBRE FINAL: TecnoMotos LC** — decidido por el dueño. Un solo pendiente real antes de imprimir cualquier cosa: ver la alerta de RUES abajo.
+
+## ⚠️ Alerta antes de imprimir rótulo/tarjetas
+
+Verificado en RUES: **"Tecnomotos" (solo, sin "LC") tiene 62 coincidencias nacionales, y una está ACTIVA en Cali hoy**: "CDA Tecnomotos SAS" (Centro de Diagnóstico Automotor — actividad de ensayos técnicos/revisión vehicular, no taller de motos, pero mismo nombre exacto y misma ciudad). La Cámara de Comercio de Cali no matricula nombres idénticos o confundibles en la misma jurisdicción.
+
+**"TecnoMotos LC" sí dio 0 coincidencias** en la búsqueda — el "LC" probablemente alcanza a diferenciarlo. Pero como comparte la palabra raíz con un negocio activo en la misma ciudad, la recomendación es: **llamar o pasar por la Cámara de Comercio de Cali a confirmar que "TecnoMotos LC" no choca**, antes de imprimir rótulo, tarjetas o facturas definitivas. No frena la operación de hoy (vender, usar el POS internamente) — solo evita un gasto de imprenta que haya que rehacer si piden ajustar el nombre.
+
+*(Dato para el checklist: si "LC" son las iniciales de algo — un lugar, los dos socios, etc. — vale la pena tenerlo documentado, ayuda a sustentar la diferenciación si la Cámara pregunta.)*
 
 ## Investigación: ¿qué nombres de motos SÍ funcionaron en otros mercados?
 
@@ -71,10 +79,13 @@ Conclusión: cualquier nombre tipo "Moto + adjetivo genérico" (Pro, Full, Rueda
 - [ ] Dominio `.com` / `.com.co` disponible.
 - [ ] Que el nombre elegido no choque con una marca ya registrada ante la **Superintendencia de Industria y Comercio (SIC)** — el RUES es registro mercantil, no registro de marca; son trámites distintos. Si el negocio va en serio a mediano plazo, registrar la marca en la SIC después de decidir el nombre evita que alguien más la registre primero.
 
-## Decisión
+## Decisión final
 
-**Pendiente.** Dos caminos abiertos para que el dueño elija:
-1. **Nombre de persona** (el patrón que más se repite entre los negocios de motos que llegaron a ser grandes y reconocidos — ver investigación arriba): si hay un nombre o apodo que quieran usar, decirlo y se verifica y arma la marca alrededor de eso.
-2. **Fuga / Rodante / Trocha** (ronda 3, 0-1 coincidencias en RUES) si prefieren no usar un nombre propio.
+**✅ TecnoMotos LC.** Elegido por el dueño (rondas 1-3 quedan arriba como historial/respaldo si alguna vez hiciera falta un nombre alterno).
 
-En cuanto se elija, se actualiza este documento, se marca el checklist de `00-constitucion-legal.md` y se dispara el checklist de rebranding técnico en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar).
+Pendientes reales antes de darlo por 100% cerrado:
+- [ ] Confirmar con la Cámara de Comercio de Cali que "TecnoMotos LC" no choca con "CDA Tecnomotos SAS" (activa en Cali) — ver alerta arriba.
+- [ ] Handle de Instagram/TikTok y dominio disponibles.
+- [ ] Documentar qué significa "LC" (útil como argumento de diferenciación si la Cámara pregunta).
+
+Con el nombre puesto, ya se puede: marcar el checklist de `00-constitucion-legal.md`, y ejecutar el rebranding técnico documentado en `.claude/agents/ceo-motos.md` (~19 archivos del POS a actualizar) cuando el dueño lo pida.
