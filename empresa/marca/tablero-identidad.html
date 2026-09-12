@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Identidad TecnoMotos LC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F1EFE7; --surface:#FCFBF6; --surface-2:#E8E4D6;
+    --ink:#1B1E21; --ink-soft:#5B5E58; --border:#DEDACD;
+    --graphite:#1B1E21; --paper:#F1EFE7; --ember:#E4622A; --steel:#2D6E82; --chrome:#A9AFB3; --spark:#F2A65A;
+    --shadow:0 1px 2px rgba(20,18,10,.06), 0 10px 26px -14px rgba(20,18,10,.22);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17191B; --surface:#1F2225; --surface-2:#282B2E;
+      --ink:#F1EFE7; --ink-soft:#A7AA9F; --border:#33373A;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17191B; --surface:#1F2225; --surface-2:#282B2E;
+    --ink:#F1EFE7; --ink-soft:#A7AA9F; --border:#33373A;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 32px -16px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:'Barlow',system-ui,sans-serif; font-size:16px; line-height:1.55; padding:0 20px;}
+  .wrap{max-width:960px; margin:0 auto; padding-block:44px 88px;}
+  h1,h2,h3{font-family:'Rajdhani',sans-serif; text-transform:uppercase; text-wrap:balance; margin:0; letter-spacing:.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums;}
+  p{max-width:62ch; margin:0 0 .9em;}
+
+  .intro{border-bottom:1px solid var(--border); padding-bottom:32px; margin-bottom:40px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ember); margin-bottom:12px;}
+  .intro h1{font-size:clamp(30px,5vw,44px); line-height:1.02;}
+  .intro p{color:var(--ink-soft); font-size:17px; margin-top:12px;}
+
+  section{margin-top:52px;}
+  .sec-head{display:flex; align-items:baseline; gap:10px; margin-bottom:20px;}
+  .sec-head h2{font-size:20px; color:var(--ink);}
+  .sec-head .tag{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); border:1px solid var(--border); border-radius:3px; padding:1px 7px;}
+
+  /* LOGO CONCEPTS */
+  .concept{margin-bottom:36px;}
+  .concept-title{display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:14px; flex-wrap:wrap;}
+  .concept-title h3{font-size:18px; color:var(--ink);}
+  .concept-title .desc{color:var(--ink-soft); font-size:14px; max-width:44ch;}
+  .swatches{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:640px){.swatches{grid-template-columns:1fr;}}
+  .swatch{border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:40px 20px; box-shadow:var(--shadow);}
+  .swatch.dark{background:var(--graphite);}
+  .swatch.light{background:var(--paper); border:1px solid #DEDACD;}
+  .swatch .icon{width:64px; height:64px;}
+  .lockup{display:flex; align-items:center; gap:10px;}
+  .wordmark{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:26px; letter-spacing:.01em;}
+  .swatch.dark .wordmark{color:var(--paper);}
+  .swatch.light .wordmark{color:var(--graphite);}
+  .lc-tag{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; border-radius:3px; padding:2px 6px; letter-spacing:.04em;}
+  .swatch.dark .lc-tag{background:var(--ember); color:var(--graphite);}
+  .swatch.light .lc-tag{background:var(--ember); color:var(--paper);}
+  .swatch-label{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.08em; margin-top:-4px;}
+
+  /* PALETTE */
+  .palette{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  @media(max-width:640px){.palette{grid-template-columns:repeat(2,1fr);}}
+  .swab{border-radius:6px; overflow:hidden; border:1px solid var(--border); background:var(--surface);}
+  .swab-color{height:64px;}
+  .swab-info{padding:10px 12px;}
+  .swab-name{font-weight:600; font-size:13.5px;}
+  .swab-hex{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft);}
+  .swab-role{font-size:12px; color:var(--ink-soft); margin-top:3px;}
+
+  /* TYPE SPECIMEN */
+  .type-row{display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:14px 0; border-bottom:1px solid var(--border); flex-wrap:wrap;}
+  .type-row:last-child{border-bottom:none;}
+  .type-sample{font-size:28px;}
+  .type-meta{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); text-align:right;}
+
+  /* USAGE */
+  .usage{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:640px){.usage{grid-template-columns:1fr;}}
+  .usage-card{border:1px solid var(--border); border-radius:6px; padding:16px 18px; background:var(--surface);}
+  .usage-card h3{font-size:13px; margin-bottom:10px; letter-spacing:.06em;}
+  .usage-card.yes h3{color:#3D7A4E;}
+  .usage-card.no h3{color:var(--ember);}
+  .usage-card ul{margin:0; padding-left:18px; font-size:14px; color:var(--ink-soft);}
+  .usage-card li{margin-bottom:6px;}
+
+  footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--border); font-size:12.5px; color:var(--ink-soft);}
+  footer code{font-family:'IBM Plex Mono',monospace; background:var(--surface-2); padding:1px 5px; border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="intro">
+    <div class="eyebrow">Identidad visual · TecnoMotos LC</div>
+    <h1>Piñón, circuito y velocidad</h1>
+    <p>Dos conceptos de ícono para el taller y venta de repuestos de motos que arrancó esta semana en Cali. Los dos usan la misma paleta de dos colores para funcionar igual sobre fondo claro u oscuro — elige el que se lea mejor en un rótulo y en el ícono de WhatsApp/Instagram, que es donde más se va a ver al principio.</p>
+  </div>
+
+  <section>
+    <div class="sec-head"><h2>Conceptos de ícono</h2><span class="tag">elegir uno</span></div>
+
+    <div class="concept">
+      <div class="concept-title">
+        <h3>1 · Piñón circuito</h3>
+        <span class="desc">La pieza de transmisión (mecánica real) con un trazo de circuito saliendo de un diente — lo "tecno" dentro de lo "moto". Más técnico y serio.</span>
+      </div>
+      <div class="swatches">
+        <div class="swatch dark">
+          <svg class="icon" viewBox="0 0 136 136" role="img" aria-label="Piñón circuito sobre fondo oscuro">
+            <g fill="none" stroke="#A9AFB3" stroke-width="4"><circle cx="68" cy="72" r="22"/><circle cx="68" cy="72" r="8" stroke-width="3"/></g>
+            <g fill="#A9AFB3">
+              <g transform="rotate(0 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(45 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(90 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(135 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(180 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(225 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(270 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(315 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+            </g>
+            <path d="M68,24 L68,10 L90,10" fill="none" stroke="#E4622A" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="90" cy="10" r="4.5" fill="#E4622A"/>
+          </svg>
+          <div class="lockup"><span class="wordmark">TecnoMotos</span><span class="lc-tag">LC</span></div>
+          <span class="swatch-label">sobre grafito</span>
+        </div>
+        <div class="swatch light">
+          <svg class="icon" viewBox="0 0 136 136" role="img" aria-label="Piñón circuito sobre fondo claro">
+            <g fill="none" stroke="#A9AFB3" stroke-width="4"><circle cx="68" cy="72" r="22"/><circle cx="68" cy="72" r="8" stroke-width="3"/></g>
+            <g fill="#A9AFB3">
+              <g transform="rotate(0 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(45 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(90 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(135 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(180 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(225 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(270 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+              <g transform="rotate(315 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+            </g>
+            <path d="M68,24 L68,10 L90,10" fill="none" stroke="#E4622A" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="90" cy="10" r="4.5" fill="#E4622A"/>
+          </svg>
+          <div class="lockup"><span class="wordmark">TecnoMotos</span><span class="lc-tag">LC</span></div>
+          <span class="swatch-label">sobre papel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept">
+      <div class="concept-title">
+        <h3>2 · Monograma velocidad</h3>
+        <span class="desc">Una "T" sólida con líneas de velocidad detrás. Más simple — se lee mejor en tamaños chicos (favicon, foto de perfil circular).</span>
+      </div>
+      <div class="swatches">
+        <div class="swatch dark">
+          <svg class="icon" viewBox="0 0 136 136" role="img" aria-label="Monograma velocidad sobre fondo oscuro">
+            <path d="M14,106 Q52,50 114,22" fill="none" stroke="#E4622A" stroke-width="7" stroke-linecap="round"/>
+            <path d="M6,86 Q46,36 108,8" fill="none" stroke="#F2A65A" stroke-width="5" stroke-linecap="round" opacity="0.65"/>
+            <g fill="#A9AFB3"><rect x="48" y="72" width="58" height="14" rx="3"/><rect x="69" y="72" width="14" height="48" rx="3"/></g>
+          </svg>
+          <div class="lockup"><span class="wordmark">TecnoMotos</span><span class="lc-tag">LC</span></div>
+          <span class="swatch-label">sobre grafito</span>
+        </div>
+        <div class="swatch light">
+          <svg class="icon" viewBox="0 0 136 136" role="img" aria-label="Monograma velocidad sobre fondo claro">
+            <path d="M14,106 Q52,50 114,22" fill="none" stroke="#E4622A" stroke-width="7" stroke-linecap="round"/>
+            <path d="M6,86 Q46,36 108,8" fill="none" stroke="#F2A65A" stroke-width="5" stroke-linecap="round" opacity="0.65"/>
+            <g fill="#A9AFB3"><rect x="48" y="72" width="58" height="14" rx="3"/><rect x="69" y="72" width="14" height="48" rx="3"/></g>
+          </svg>
+          <div class="lockup"><span class="wordmark">TecnoMotos</span><span class="lc-tag">LC</span></div>
+          <span class="swatch-label">sobre papel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Paleta</h2><span class="tag">6 tonos</span></div>
+    <div class="palette">
+      <div class="swab"><div class="swab-color" style="background:#1B1E21"></div><div class="swab-info"><div class="swab-name">Grafito</div><div class="swab-hex">#1B1E21</div><div class="swab-role">Fondo oscuro / texto sobre claro</div></div></div>
+      <div class="swab"><div class="swab-color" style="background:#F1EFE7"></div><div class="swab-info"><div class="swab-name">Papel</div><div class="swab-hex">#F1EFE7</div><div class="swab-role">Fondo claro / texto sobre oscuro</div></div></div>
+      <div class="swab"><div class="swab-color" style="background:#E4622A"></div><div class="swab-info"><div class="swab-name">Candela</div><div class="swab-hex">#E4622A</div><div class="swab-role">Acento principal — el color de marca</div></div></div>
+      <div class="swab"><div class="swab-color" style="background:#2D6E82"></div><div class="swab-info"><div class="swab-name">Acero</div><div class="swab-hex">#2D6E82</div><div class="swab-role">Acento secundario, franjas y fondos</div></div></div>
+      <div class="swab"><div class="swab-color" style="background:#A9AFB3"></div><div class="swab-info"><div class="swab-name">Cromo</div><div class="swab-hex">#A9AFB3</div><div class="swab-role">Neutro metálico, estructura del ícono</div></div></div>
+      <div class="swab"><div class="swab-color" style="background:#F2A65A"></div><div class="swab-info"><div class="swab-name">Destello</div><div class="swab-hex">#F2A65A</div><div class="swab-role">Tinte de acento, solo brillos/detalle</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Tipografía</h2><span class="tag">3 roles</span></div>
+    <div class="type-row"><span class="type-sample" style="font-family:'Rajdhani'; font-weight:700;">TecnoMotos LC</span><span class="type-meta">Rajdhani Bold<br>logotipo / títulos</span></div>
+    <div class="type-row"><span class="type-sample" style="font-family:'Barlow'; font-weight:500;">Taller y repuestos de motos</span><span class="type-meta">Barlow Medium<br>redes / avisos</span></div>
+    <div class="type-row"><span class="type-sample mono">OT000001 · $45.000</span><span class="type-meta">IBM Plex Mono<br>precios / códigos</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Uso</h2></div>
+    <div class="usage">
+      <div class="usage-card yes"><h3>SÍ</h3><ul>
+        <li>Ícono a color sobre grafito, papel, o una foto con contraste.</li>
+        <li>Versión solo texto en Rajdhani cuando el espacio es muy angosto.</li>
+        <li>Un acento de Candela por pieza — no repartirlo por todos lados.</li>
+      </ul></div>
+      <div class="usage-card no"><h3>NO</h3><ul>
+        <li>Estirar o deformar el ícono.</li>
+        <li>Ponerlo sobre fondos de bajo contraste con Candela.</li>
+        <li>Mezclar los dos conceptos en una misma pieza.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <footer>
+    Archivos fuente en <code>empresa/marca/</code>: <code>icono-pinon-circuito.svg</code>, <code>icono-monograma-velocidad.svg</code>. Guía completa en <code>empresa/04-identidad-visual.md</code>.
+  </footer>
+
+</div>
+</body>
+</html>

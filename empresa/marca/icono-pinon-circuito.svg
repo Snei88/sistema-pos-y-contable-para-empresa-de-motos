@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 136" width="136" height="136" role="img" aria-label="Icono TecnoMotos LC: piñón con circuito">
+  <g fill="none" stroke="#A9AFB3" stroke-width="4">
+    <circle cx="68" cy="72" r="22"/>
+    <circle cx="68" cy="72" r="8" stroke-width="3"/>
+  </g>
+  <g fill="#A9AFB3">
+    <g transform="rotate(0 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(45 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(90 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(135 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(180 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(225 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(270 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+    <g transform="rotate(315 68 72)"><rect x="63" y="24" width="10" height="16" rx="2"/></g>
+  </g>
+  <path d="M68,24 L68,10 L90,10" fill="none" stroke="#E4622A" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="90" cy="10" r="4.5" fill="#E4622A"/>
+</svg>
