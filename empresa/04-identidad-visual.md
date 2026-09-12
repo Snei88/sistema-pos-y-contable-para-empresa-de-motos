@@ -1,17 +1,34 @@
 # Identidad visual — TecnoMotos LC
 
-Estado: 🟡 dos conceptos de ícono listos para elegir; el resto de la identidad (paleta, tipografía, uso) ya está definido y no depende de cuál ícono se elija.
+Estado: 🟡 los dos conceptos de ícono dibujados a mano (SVG geométrico) no convencieron al dueño. Se cambia de enfoque: generar el logo con IA (Gemini) usando el prompt de abajo. La paleta y tipografía de este documento quedan como referencia/respaldo, no como restricción para lo que genere Gemini.
 
-Vista completa con los dos conceptos renderizados: **ver el artifact publicado** (enlazado en la conversación) o abrir los archivos `.svg` de esta carpeta directamente.
+## Prompt para generar el logo con Gemini
 
-## Los dos conceptos de ícono
+Copiar y pegar tal cual (deliberadamente no se le dice qué colores usar — que los elija el modelo):
 
-Ambos están en `empresa/marca/` como SVG (vectorial — se puede imprimir en cualquier tamaño, de un aviso grande a un ícono de WhatsApp, sin perder calidad):
+> Diseña un logo profesional para "TecnoMotos LC", un taller mecánico y tienda de repuestos/accesorios para motocicletas en Cali, Colombia. Atiende principalmente motos populares de uso diario (100-150cc, marcas como Bajaj, AKT, Yamaha, Suzuki, Honda) — no motos de alto cilindraje ni de lujo.
+>
+> Personalidad de marca: confianza, transparencia y seriedad técnica, con un toque moderno/tecnológico que combine con la tradición mecánica de un taller — un negocio que acaba de empezar y quiere transmitir que hace las cosas bien desde el primer día, no un taller informal de barrio.
+>
+> Estilo: logo vectorial plano (flat design), minimalista, geométrico, sin fotorealismo, sin mascota ni personaje, sin ilustración detallada tipo clipart. Debe verse igual de bien como ícono pequeño (foto de perfil de Instagram/WhatsApp, favicon) que como rótulo grande de almacén.
+>
+> Símbolo: algo relacionado con motos (rueda, piñón, cadena, velocímetro) combinado de forma sutil con un elemento que sugiera tecnología/precisión (un circuito, una línea de datos, una forma geométrica de precisión) — un solo símbolo limpio, no recargado.
+>
+> Incluye el nombre "TecnoMotos" en tipografía bold/condensada, y "LC" como elemento secundario más pequeño (una placa o etiqueta) junto o debajo del nombre principal.
+>
+> Elige la paleta de colores que mejor comunique esta personalidad de marca — evita combinaciones genéricas de plantilla, que se sienta distintivo.
+>
+> Formato: fondo transparente, alto contraste, líneas limpias que funcionen también en un solo color (para grabado o vinilo) además de a color completo. Sin texto adicional, sin marcas de agua, sin fondo decorativo.
 
-1. **`icono-pinon-circuito.svg`** — un piñón (la pieza de transmisión, coherente con que el negocio es justo eso: mecánica) con un pequeño trazo de circuito saliendo de un diente — la parte "tecno" literal dentro de la parte "moto" literal. Más técnico y serio.
-2. **`icono-monograma-velocidad.svg`** — una "T" sólida con dos líneas de velocidad detrás, como el trazo de una rueda girando rápido. Más simple, se lee mejor en tamaños muy pequeños (favicon, foto de perfil circular de Instagram/WhatsApp).
+**Si el texto sale distorsionado** (les pasa seguido a los generadores de imagen con letras), pedir aparte esta versión sin texto y luego poner el nombre en Rajdhani/Barlow por separado (ver tipografía abajo):
 
-Los dos usan los mismos dos colores (cromo + candela — ver paleta abajo) para que sirvan igual de bien sobre fondo claro u oscuro sin necesitar una versión "invertida" aparte.
+> Genera la misma versión pero sin ningún texto ni letras — solo el símbolo/ícono, fondo transparente.
+
+**Recomendación práctica:** generar 3-4 variaciones (cada corrida da un resultado distinto), elegir la que mejor se vea en pequeño (simula verla como foto de perfil circular) y traerla de vuelta acá para integrarla al POS y al resto de `empresa/marca/`. Una imagen generada por IA sale en PNG/raster, no vectorial — para rótulo grande o bordado en uniforme puede necesitar que un diseñador la vectorice después; para redes/WhatsApp/impresión normal no hace falta.
+
+## Respaldo: los dos conceptos dibujados a mano (descartados)
+
+Quedan en `empresa/marca/` (`icono-pinon-circuito.svg`, `icono-monograma-velocidad.svg`) y en el tablero publicado, por si ninguna generación de Gemini convence y se quiere volver a esta ruta.
 
 ## Paleta de marca
 
@@ -46,6 +63,7 @@ Los dos usan los mismos dos colores (cromo + candela — ver paleta abajo) para 
 
 ## Pendiente
 
-- [ ] Elegir entre "Piñón circuito" y "Monograma velocidad" como ícono oficial (o pedir una tercera variante).
-- [ ] Aplicar el ícono elegido al logo del sistema POS (`src/assets/logo.jpeg`) cuando se haga el rebranding técnico.
-- [ ] Definir tamaño mínimo de impresión (para que el trazo del circuito/las líneas de velocidad no se pierdan en un aviso muy pequeño).
+- [ ] Generar el logo con el prompt de Gemini (sección de arriba) y traer las variaciones para elegir.
+- [ ] Una vez elegido, actualizar la sección de paleta/tipografía de este documento con lo que Gemini haya definido (puede reemplazar Grafito/Candela/etc. si el resultado usa otros colores).
+- [ ] Aplicar el logo elegido al sistema POS (`src/assets/logo.jpeg`) cuando se haga el rebranding técnico.
+- [ ] Confirmar si el resultado de Gemini necesita vectorizarse para rótulo grande/bordado.

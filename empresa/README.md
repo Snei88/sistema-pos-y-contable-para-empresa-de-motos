@@ -12,8 +12,8 @@ No se construye todo de una vez — se avanza módulo por módulo, y cada docume
 | [`01-naming.md`](./01-naming.md) | ✅ nombre final: **TecnoMotos LC** | Historial completo de candidatos (rondas 1-3) hasta la decisión final, con la alerta de RUES pendiente de confirmar en Cámara de Comercio de Cali. |
 | [`02-estrategia-comercial-marketing.md`](./02-estrategia-comercial-marketing.md) | 🟢 en ejecución con el nombre aplicado | Propuesta de valor, diferenciación, producto ancla, canales priorizados y plan de contenido de las primeras 4 semanas. |
 | [`03-procesos-operativos.md`](./03-procesos-operativos.md) | 🟢 en uso desde el día 1 | Apertura/cierre de caja, recepción de mercancía, venta, orden de trabajo, backup. |
-| [`04-identidad-visual.md`](./04-identidad-visual.md) | 🟡 elegir ícono | Paleta, tipografía y dos conceptos de logo (`marca/`) — falta elegir el oficial. |
-| [`marca/`](./marca/) | — | Archivos SVG de los íconos y el tablero de identidad visual. |
+| [`04-identidad-visual.md`](./04-identidad-visual.md) | 🟡 generando con IA | Prompt listo para generar el logo con Gemini; los conceptos SVG a mano quedan de respaldo. |
+| [`marca/`](./marca/) | — | Conceptos de ícono SVG (respaldo) y el tablero de identidad visual. |
 | [`informes/`](./informes/) | — | Informes fechados (auditorías, diagnósticos de negocio). El primero: día 1. |
 
 **Nombre del negocio: TecnoMotos LC. Tipo societario: persona natural.** ⚠️ Pendiente confirmar en Cámara de Comercio de Cali que no choca con "CDA Tecnomotos SAS" (activa en Cali) antes de imprimir rótulo/tarjetas — ver `01-naming.md`.
