@@ -57,5 +57,5 @@ Una vez matriculados, el establecimiento físico (el taller) necesita además, s
 
 - [x] Tipo societario: **persona natural**
 - [x] Nombre definitivo: **TecnoMotos LC** (ver `01-naming.md` — pendiente confirmar con la Cámara de Comercio de Cali que no choca con "CDA Tecnomotos SAS", activa en Cali con la misma palabra raíz)
-- [ ] Dirección exacta del taller en Cali (para el concepto de uso de suelo)
+- [ ] Dirección exacta del taller en Cali: dato preliminar **"Calle 16 con Cra 34 #40-10"** — ⚠️ el formato mezcla dos referencias de calle que no cuadran entre sí (ver nota abajo). Confirmar la dirección tal como aparece en el recibo de servicios/contrato de arriendo antes de usarla en Cámara de Comercio o el concepto de uso de suelo — un error aquí puede invalidar el trámite o hacer que el pin de Google Maps quede mal puesto.
 - [ ] Actividad económica (código CIIU) a declarar — candidatos ya identificados en RUES para negocios similares: **4542** (mantenimiento y reparación de motocicletas) y **4541** (comercio de motocicletas y sus partes/piezas/accesorios); probablemente se necesiten ambos si se va a reparar y vender repuestos.

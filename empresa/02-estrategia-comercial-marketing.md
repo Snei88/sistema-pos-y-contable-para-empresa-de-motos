@@ -31,7 +31,7 @@ Confirmado en el informe día 1: los 8 competidores identificados en Cali compit
 | TikTok | `@tecnomotoslc` | ✅ creado — bio: "🔧 Taller y repuestos de motos en Cali / 📲 wa.me/573502404542" |
 | Instagram | `@tecnomotoslc` | ✅ creado — bio: "🔧 Taller y repuestos de motos en Cali / 🏍️ Bajaj·AKT·Yamaha·Suzuki·Honda / 📩 tecnomotoslc@gmail.com". Configurar como cuenta de empresa para botón nativo de WhatsApp. |
 | WhatsApp | `3502404542` → `https://wa.me/573502404542` | ✅ número confirmado — falta pasar a WhatsApp Business y cargar catálogo |
-| Google Business Profile | — | ⏳ pendiente |
+| Google Business Profile | Dirección: "Calle 16 con Cra 34 #40-10" | ✅ ficha creada — ⚠️ verificar que la dirección esté bien escrita (ver `00-constitucion-legal.md`), el pin en el mapa depende de que sea exacta |
 
 **Regla de consistencia:** mismo handle `tecnomotoslc` en todas las redes, mismo número de WhatsApp en todas partes (bio, Google Business, rótulo) — nunca dar a elegir entre dos canales de contacto distintos.
 
