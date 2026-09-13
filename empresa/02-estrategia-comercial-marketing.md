@@ -23,18 +23,28 @@ Confirmado en el informe día 1: los 8 competidores identificados en Cali compit
 - **Ticket secundario**: pre-revisión técnico-mecánica antes del CDA (barata de dar, alta confianza generada).
 - **Precio piso**: costo + margen mínimo del 20% en repuestos de alta rotación (hipótesis a validar con proveedores locales — ver sección financiera del informe día 1); no vender bajo ese piso por conseguir el primer cliente.
 
-## 4. Secuencia de canales (bajo costo primero)
+## 4. Canales digitales — ya activos
 
-Igual que en el informe día 1, ya con el nombre aplicable:
+| Canal | Handle / dato | Estado |
+|---|---|---|
+| Correo | `tecnomotoslc@gmail.com` | ✅ creado |
+| TikTok | `@tecnomotoslc` | ✅ creado — bio: "🔧 Taller y repuestos de motos en Cali / 📲 wa.me/573502404542" |
+| Instagram | `@tecnomotoslc` | ✅ creado — bio: "🔧 Taller y repuestos de motos en Cali / 🏍️ Bajaj·AKT·Yamaha·Suzuki·Honda / 📩 tecnomotoslc@gmail.com". Configurar como cuenta de empresa para botón nativo de WhatsApp. |
+| WhatsApp | `3502404542` → `https://wa.me/573502404542` | ✅ número confirmado — falta pasar a WhatsApp Business y cargar catálogo |
+| Google Business Profile | — | ⏳ pendiente |
 
-1. **Semana 1 — Google Business Profile** a nombre de "TecnoMotos LC", con dirección, horario, fotos reales del taller (no stock). La categoría/descripción SÍ debe decir "taller y repuestos de motos" — el hallazgo de la investigación de naming es que eso va en la categoría/eslogan, no en el nombre de marca.
-2. **Semana 1 — WhatsApp Business** a nombre de "TecnoMotos LC", con catálogo de servicios y el combo ancla fijado como mensaje de bienvenida.
-3. **Semana 2 — Instagram/TikTok** `@tecnomotoslc` (verificar disponibilidad exacta antes de publicar nada).
+**Regla de consistencia:** mismo handle `tecnomotoslc` en todas las redes, mismo número de WhatsApp en todas partes (bio, Google Business, rótulo) — nunca dar a elegir entre dos canales de contacto distintos.
+
+## 5. Secuencia de canales (bajo costo primero)
+
+1. **Semana 1 — Google Business Profile** a nombre de "TecnoMotos LC", con dirección, horario, fotos reales del taller (no stock), mismo WhatsApp `3502404542`. La categoría/descripción SÍ debe decir "taller y repuestos de motos" — el hallazgo de la investigación de naming es que eso va en la categoría/eslogan, no en el nombre de marca.
+2. **Semana 1 — WhatsApp Business** con catálogo de servicios y el combo ancla fijado como mensaje de bienvenida.
+3. **Semana 1-2 — Instagram/TikTok** ya creados — completar bio, foto de perfil (logo) y primera publicación.
 4. **Semana 2 — Señalización física** con el nombre y un ícono/identidad visual coherente.
 5. **Semana 3 — Grupos locales / referidos** (grupos de WhatsApp/Facebook de motociclistas del barrio/zona).
-6. **Mes 2+ — Pauta paga**, solo después de tener el nombre fijo, catálogo cargado y al menos 2-3 semanas de contenido orgánico publicado.
+6. **Mes 2+ — Pauta paga**, solo después de tener catálogo cargado y al menos 2-3 semanas de contenido orgánico publicado.
 
-## 5. Plan de contenido — primeras 4 semanas
+## 6. Plan de contenido — primeras 4 semanas
 
 Formato de mayor conversión verificado en el informe día 1: "antes/después" + contenido educativo, no publicidad de producto directa.
 
@@ -45,7 +55,7 @@ Formato de mayor conversión verificado en el informe día 1: "antes/después" +
 | 3 | Antes/después | Tip: qué pide el CDA en la revisión técnico-mecánica 2026 | Testimonio o reseña del primer cliente satisfecho |
 | 4 | Antes/después | Tip: genérico vs. original, cuándo usar cada uno | Balance del primer mes: cuántas motos atendidas (transparencia genera confianza) |
 
-## 6. Métricas a mirar cada semana
+## 7. Métricas a mirar cada semana
 
 - Ventas/OT de la semana (ya en el dashboard del POS).
 - Nuevas conversaciones de WhatsApp Business (llevar aparte hasta que valga la pena integrarlo al POS).
@@ -55,6 +65,10 @@ Formato de mayor conversión verificado en el informe día 1: "antes/después" +
 ## Pendiente
 
 - [ ] Confirmar con Cámara de Comercio de Cali que "TecnoMotos LC" no choca con "CDA Tecnomotos SAS" (ver `01-naming.md`).
-- [ ] Confirmar handle de Instagram/TikTok (`@tecnomotoslc`) y dominio disponibles.
+- [x] Handle de Instagram/TikTok (`@tecnomotoslc`) — creados.
+- [x] Correo (`tecnomotoslc@gmail.com`) y WhatsApp (`3502404542`) — confirmados.
+- [ ] Configurar Instagram como cuenta de empresa (botón nativo de WhatsApp) y pasar el número a WhatsApp Business.
+- [ ] Crear Google Business Profile con los mismos datos.
+- [ ] Poner foto de perfil (logo, sección `04-identidad-visual.md`) en Instagram/TikTok.
 - [ ] Definir precio publicado del combo "TecnoMotos al día" (depende de costos reales de la mercancía que llega).
 - [ ] Redactar el texto de garantía estándar para el PDF de OT/factura.
