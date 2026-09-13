@@ -1,8 +1,23 @@
 # Identidad visual — TecnoMotos LC
 
-Estado: 🟡 los dos conceptos de ícono dibujados a mano (SVG geométrico) no convencieron al dueño. Se cambia de enfoque: generar el logo con IA (Gemini) usando el prompt de abajo. La paleta y tipografía de este documento quedan como referencia/respaldo, no como restricción para lo que genere Gemini.
+Estado: 🟢 logo principal elegido (`marca/logo-tecnomotos-lc-v1.jpg`, generado con Gemini) — se usa como imagen de marca para redes/banners. Falta generar un ícono simplificado derivado del mismo estilo para tamaños pequeños/grabado (ver más abajo), y resolver el fondo transparente.
 
-## Prompt para generar el logo con Gemini
+## Logo elegido
+
+`empresa/marca/logo-tecnomotos-lc-v1.jpg` — moto deportiva estilo carreras (verde/negro/plata) con "TecnoMotos LC" en tipografía bold, skyline y bandera a cuadros. Generado con Gemini a partir del prompt de esta guía.
+
+**Decisión consciente, documentada para no repetir la discusión después:**
+- El estilo (moto deportiva de alto cilindraje) no coincide con el segmento real de clientes (motos populares de 100-150cc: Bajaj, AKT, Yamaha, Honda de uso diario/trabajo, según la investigación de mercado del informe día 1). Se usa igual como imagen de marca/energía visual, sabiendo que no representa literalmente la moto que va a entrar al taller — riesgo aceptado, no un error sin ver.
+- El parecido de color/forma con un modelo real (estilo Kawasaki) es un riesgo bajo de marca a futuro si el negocio crece mucho — no bloquea el uso hoy, pero si en algún momento se hace merchandising a gran escala o franquicias, vale la pena encargar una versión 100% original a un diseñador.
+- **Pendiente antes de usarlo en redes/rótulo:** el fondo es blanco sólido, no transparente — quitarlo con un editor (remove.bg o similar) antes de ponerlo sobre cualquier fondo que no sea blanco.
+
+## Ícono simplificado (pendiente de generar)
+
+Este logo no sirve en tamaños chicos (foto de perfil, favicon) ni para grabado/vinilo de un solo color — demasiado detalle. Se necesita un ícono derivado, mismo estilo/colores, mucho más simple. Prompt para Gemini:
+
+> Toma el mismo logo de TecnoMotos LC (mismos colores verde/negro/plata, misma tipografía) pero simplifícalo a un ícono plano minimalista sin la moto fotorrealista — usa solo una silueta simple de rueda o velocímetro, para que se vea bien como ícono pequeño de 64x64 px y funcione también en un solo color. Fondo transparente.
+
+## Prompt original (para nuevas variaciones o el ícono derivado)
 
 Copiar y pegar tal cual (deliberadamente no se le dice qué colores usar — que los elija el modelo):
 
@@ -26,44 +41,44 @@ Copiar y pegar tal cual (deliberadamente no se le dice qué colores usar — que
 
 **Recomendación práctica:** generar 3-4 variaciones (cada corrida da un resultado distinto), elegir la que mejor se vea en pequeño (simula verla como foto de perfil circular) y traerla de vuelta acá para integrarla al POS y al resto de `empresa/marca/`. Una imagen generada por IA sale en PNG/raster, no vectorial — para rótulo grande o bordado en uniforme puede necesitar que un diseñador la vectorice después; para redes/WhatsApp/impresión normal no hace falta.
 
-## Respaldo: los dos conceptos dibujados a mano (descartados)
+## Respaldo (descartado)
 
-Quedan en `empresa/marca/` (`icono-pinon-circuito.svg`, `icono-monograma-velocidad.svg`) y en el tablero publicado, por si ninguna generación de Gemini convence y se quiere volver a esta ruta.
+Los dos conceptos de ícono dibujados a mano (`icono-pinon-circuito.svg`, `icono-monograma-velocidad.svg`) y su paleta grafito/candela/acero quedan en `empresa/marca/` y en el tablero publicado, solo como referencia histórica — el logo activo es el de Gemini (verde/negro/plata), no ese sistema.
 
-## Paleta de marca
+## Paleta de marca (del logo elegido)
 
-| Token | Hex | Rol |
+Tomada del resultado de Gemini — no fue una elección previa, se documenta después de verla para tener el hex exacto en el resto de piezas (rótulo, redes, POS):
+
+| Color | Uso en el logo | Nota |
 |---|---|---|
-| **Grafito** | `#1B1E21` | Fondo oscuro / textos sobre fondo claro |
-| **Papel** | `#F1EFE7` | Fondo claro / textos sobre fondo oscuro |
-| **Candela** | `#E4622A` | Acento principal — el color de marca. Úsalo en el ícono, en el detalle de rótulo, en botones/CTAs de redes. |
-| **Acero** | `#2D6E82` | Acento secundario — para no saturar todo de naranja; sirve para franjas, fondos de sección, texto de énfasis. |
-| **Cromo** | `#A9AFB3` | Neutro metálico — la estructura del ícono y líneas finas. |
-| **Destello** | `#F2A65A` | Tinte claro de Candela — solo para brillos/gradientes sutiles, nunca como color principal. |
+| Verde (estilo "racing") | Acentos de la moto y de "Motos" en el nombre | Color dominante — es lo que la gente va a recordar de la marca |
+| Negro/grafito | Carrocería de la moto, sombras, contorno | Fondo natural para el logo (además del blanco original) |
+| Plata/blanco | "Tecno" del nombre, reflejos, bandera a cuadros | Para texto/detalles sobre fondo oscuro |
 
-**Regla simple:** Grafito + Papel son la base (uno de fondo, el otro de texto, según dónde se use). Candela es el color que la gente debe asociar con la marca — no lo repartas en todo, resérvalo para el ícono y un acento por pieza (un botón, un detalle del rótulo, el borde de una tarjeta de presentación).
+*(Pendiente: sacar los hex exactos de la imagen cuando se tenga la versión con fondo transparente — por ahora se usa el logo tal como salió, sin forzarlo a una paleta de tokens predefinida.)*
 
 ## Tipografía
 
-| Uso | Fuente | Por qué |
-|---|---|---|
-| Logotipo / títulos grandes | **Rajdhani** (Bold/SemiBold) | Condensada y de trazo técnico — es la que carga la personalidad "tecno" de la marca. Gratis en Google Fonts. |
-| Texto de uso general (redes, WhatsApp Business, avisos) | **Barlow** (Regular/SemiBold) | Limpia y cálida, buena legibilidad en letreros y pantallas de celular. |
-| Datos/códigos (precios en lista, códigos de producto en un aviso) | **IBM Plex Mono** | Números alineados, look de ficha técnica — la misma familia que ya usan los documentos internos de `empresa/`. |
+El logo ya trae su propia tipografía (bold/itálica tipo carreras) — para piezas donde no cabe el logo completo (un recibo, un pie de página, un formulario), usar:
 
-**Nombre de marca escrito:** siempre "TecnoMotos LC" (T y M mayúsculas juntas, sin espacio en "TecnoMotos"; "LC" separado). En el logotipo grande, "LC" puede ir como una placa/etiqueta pequeña al lado o debajo del nombre principal, no del mismo tamaño.
+| Uso | Fuente |
+|---|---|
+| Texto de uso general (redes, WhatsApp Business, avisos) | **Barlow** (Regular/SemiBold) — gratis en Google Fonts, limpia en pantalla de celular |
+| Datos/códigos (precios, códigos de producto) | **IBM Plex Mono** — la misma familia que ya usan los documentos internos de `empresa/` |
+
+**Nombre de marca escrito:** siempre "TecnoMotos LC".
 
 ## Uso — qué sí y qué no
 
-- ✅ Ícono a color (cromo + candela) sobre fondo grafito, papel, o una foto (tiene contraste en los tres casos).
-- ✅ Versión solo texto ("TecnoMotos LC" en Rajdhani) cuando el espacio es muy angosto (un renglón de recibo, un pie de página).
-- ❌ No estirar ni deformar el ícono — si hay que ajustar el ancho, se dejan márgenes en blanco, no se aplasta.
-- ❌ No poner el ícono sobre fondos de bajo contraste (ej. candela sobre un naranja parecido) — usar siempre grafito, papel, o una foto con suficiente contraste detrás.
-- ❌ No mezclar los dos conceptos de ícono en una misma pieza (elegir uno como el oficial una vez se decida).
+- ✅ Logo completo (con la moto) en redes sociales, banners, portada de WhatsApp Business — donde el detalle se aprecia.
+- ✅ Ícono simplificado (pendiente de generar, ver arriba) para foto de perfil, favicon, grabado/vinilo de un solo color.
+- ❌ No usar el logo completo en tamaños menores a ~150px de ancho — se pierde el detalle y se ve sucio.
+- ❌ No estirar ni deformar el logo — si hay que ajustar el ancho, dejar márgenes, no aplastar.
+- ❌ No imprimir sobre fondo blanco el archivo actual sin antes recortar el fondo si el destino no es blanco (evita el "cuadro" alrededor).
 
 ## Pendiente
 
-- [ ] Generar el logo con el prompt de Gemini (sección de arriba) y traer las variaciones para elegir.
-- [ ] Una vez elegido, actualizar la sección de paleta/tipografía de este documento con lo que Gemini haya definido (puede reemplazar Grafito/Candela/etc. si el resultado usa otros colores).
+- [ ] Quitar el fondo blanco de `logo-tecnomotos-lc-v1.jpg` (remove.bg o similar) para uso en redes/rótulo sobre fondos de color.
+- [ ] Generar el ícono simplificado (prompt de arriba) para tamaños pequeños y grabado de un solo color.
 - [ ] Aplicar el logo elegido al sistema POS (`src/assets/logo.jpeg`) cuando se haga el rebranding técnico.
-- [ ] Confirmar si el resultado de Gemini necesita vectorizarse para rótulo grande/bordado.
+- [ ] Evaluar más adelante (si el negocio crece) encargar una versión 100% original a un diseñador, por el parecido de la moto con un modelo real.
