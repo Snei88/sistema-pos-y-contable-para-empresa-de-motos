@@ -58,3 +58,14 @@ Reemplazan los precios calculados con la fórmula costo+19%+40% del Excel inicia
 **Nota operativa — trompo stop:** el paquete llega armado (trompo + resorte); se vende así completo a $4.500. Si sobran resortes sueltos o se necesita solo repuesto, se vende aparte a $1.500 — mantener en cajas separadas y bien marcadas para no mezclarlos.
 
 **Pendiente:** kits de retenes — el dueño va a separarlos en cajas individuales por su cuenta y explicar el proceso; por ahora solo queda registrado el precio de venta completo ($18.000).
+
+## Ganancia proyectada si se vende todo el primer pedido
+
+Calculado con los precios finales de la tabla de arriba (no la fórmula genérica costo+19%+40%):
+
+| Escenario | Ingreso total | Costo | Ganancia bruta | Margen s/venta |
+|---|--:|--:|--:|--:|
+| Todo "para llevar" | $2.448.000 | $1.125.000 | $1.323.000 | 54% |
+| Todo instalado | $2.665.000 | $1.125.000 | $1.540.000 | 58% |
+
+Supuestos: los 10 trompo stop se venden armados completos ($4.500 c/u, no separados en resorte suelto); los kits de retenes se venden completos ($18.000), pendiente de recalcular si se terminan vendiendo por piezas sueltas.
