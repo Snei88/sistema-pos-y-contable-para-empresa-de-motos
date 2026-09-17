@@ -13,7 +13,9 @@ No se construye todo de una vez — se avanza módulo por módulo, y cada docume
 | [`02-estrategia-comercial-marketing.md`](./02-estrategia-comercial-marketing.md) | 🟢 en ejecución con el nombre aplicado | Propuesta de valor, diferenciación, producto ancla, canales priorizados y plan de contenido de las primeras 4 semanas. |
 | [`03-procesos-operativos.md`](./03-procesos-operativos.md) | 🟢 en uso desde el día 1 | Apertura/cierre de caja, recepción de mercancía, venta, orden de trabajo, backup. |
 | [`04-identidad-visual.md`](./04-identidad-visual.md) | 🟢 logo elegido / 🟡 falta ícono simplificado | Logo generado con Gemini (`marca/logo-tecnomotos-lc-v1.jpg`), con las limitaciones y pendientes documentados antes de imprimir. |
+| [`05-compras.md`](./05-compras.md) | 🟢 en uso | Bitácora de compras a proveedores: qué se pidió, a quién, en qué estado de pago. |
 | [`marca/`](./marca/) | — | Logo elegido, conceptos SVG descartados (respaldo) y el tablero de identidad visual. |
+| [`compras/`](./compras/) | — | Archivos de detalle de cada pedido (Excel con costo/precio/margen). |
 | [`informes/`](./informes/) | — | Informes fechados (auditorías, diagnósticos de negocio). El primero: día 1. |
 
 **Nombre del negocio: TecnoMotos LC. Tipo societario: persona natural.** ⚠️ Pendiente confirmar en Cámara de Comercio de Cali que no choca con "CDA Tecnomotos SAS" (activa en Cali) antes de imprimir rótulo/tarjetas — ver `01-naming.md`.
