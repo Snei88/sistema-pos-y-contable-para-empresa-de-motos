@@ -22,6 +22,7 @@ Confirmado en el informe día 1: los 8 competidores identificados en Cali compit
 - **Combo de mantenimiento "TecnoMotos al día"**: revisión + ajuste de cadena/piñón/catalina + cambio de aceite + revisión de frenos, precio fijo y publicado. Ancla porque coincide con lo de mayor rotación (sección 06 del informe día 1).
 - **Ticket secundario**: pre-revisión técnico-mecánica antes del CDA (barata de dar, alta confianza generada).
 - **Precio piso**: costo + margen mínimo del 20% en repuestos de alta rotación (hipótesis a validar con proveedores locales — ver sección financiera del informe día 1); no vender bajo ese piso por conseguir el primer cliente.
+- **Regla de dos tarifas (adoptada 17/09/2026):** todo repuesto que se pueda instalar en el taller tiene dos precios — "para llevar" (solo el repuesto) e "instalado" (repuesto + mano de obra), con una diferencia de ~$2.000-5.000 según la pieza. Precios reales del primer pedido en `05-compras.md`. Mismo precio para todos los SKU de una categoría/uso (ej. todas las pastillas de freno delantero al mismo precio) para simplificar cobro y comunicación.
 
 ## 4. Canales digitales — ya activos
 
